@@ -19,12 +19,24 @@ export default {
     telegram: "Telegram",
     linkedin: "LinkedIn",
     github: "GitHub",
+    whatsapp: "WhatsApp",
   },
   skills: {
     title: "Principais skills",
     description:
       "Tive a oportunidade de trabalhar com uma variedade de tecnologias ao longo da minha carreira, além ser apaixonado por estudos. Portanto, essa lista está sempre sendo atualizada.",
     tabsPlaceholder: "[ Aqui vai entrar nosso componente de abas interativas ]",
+    categories: {
+      ai: "Inteligência Artificial",
+      languages: "Linguagens de programação / markup / stylesheet",
+      frontend: "Front-end — frameworks e bibliotecas",
+      backend: "Back-end — frameworks e bibliotecas",
+      protocols: "Protocolos de comunicação (construção e consumo)",
+      databases: "Bancos de dados",
+      cloud: "Cloud",
+      deployment: "Ambiente de trabalho / deploy",
+      others: "Outros",
+    },
   },
   experiences: {
     title: "Experiências",
@@ -40,7 +52,7 @@ export default {
       wowe: {
         name: "Wowe",
         role: "Desenvolvedor Fullstack",
-        time: "Fev/2024 - Ago/2024",
+        time: "Nov/2023 - Ago/2024",
         description:
           "Desenvolvi 100% do frontend (Flutter e React) e 100% do backend (Go) de um aplicativo de rede social para compartilhamento de experiências e trendings, utilizando arquitetura limpa em ambas as frentes. Projeto baseado com o uso de ferramentas como Google Places, Elasticsearch, RabbitMQ, Kafka entre outros.",
       },
@@ -49,28 +61,27 @@ export default {
         role: "Desenvolvedor FrontEnd",
         time: "Nov/2023 - Fev/2024",
         description:
-          "Nesse projeto, atuei como desenvolvedor Front End (React e Flutter Desktop) de um produto de tradução em tempo real de video-chamadas baseado em inteligencia artificial, com uso via web extension ou desktop.",
+          "Nesse projeto, atuei como desenvolvedor Front End (React e Flutter Desktop) de um produto de tradução em tempo real de video-chamadas baseado em inteligencia artificial, com uso via Chrome extension ou o aplicativo desktop, podendo ser integrado ao Teams, Google Meet e Zoom.",
       },
       cerc: {
         name: "CERC",
         role: "Desenvolvedor FrontEnd",
         time: "Dez/2022 - Nov/2023",
         description:
-          "Atuei integralmente na construção, desde o início, de uma plataforma web de crédito de carbono construída com Angular.",
+          "Atuei integralmente na construção de uma plataforma web de crédito de carbono construída com Angular e o MVP mobile com Flutter, integrado com REST API.",
       },
       headson: {
         name: "HeadsOn",
         role: "Desenvolvedor Fullstack",
         time: "Jan/2022 - Dez/2022",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        description:"Trabalhando com Flutter, React e Go, atuei como desenvolvedor fullstack na construção de um aplicativo de uma instituição financeira, administrando a carteira digital dos usuários com foco em pagamentos e investimentos."
       },
       linx: {
         name: "Linx",
         role: "Desenvolvedor Fullstack",
         time: "Nov/2019 - Dez/2022",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "Utilizando Flutter e Angular, trabalhei no desenvolvimento do banco digital Nova Conta Linx, em um projeto White Label com a integração via BFF e GraphQL, permitindo uma solução financeira completa em pagamentos. ",
       },
     },
   },

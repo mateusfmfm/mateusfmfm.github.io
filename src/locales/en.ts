@@ -25,6 +25,17 @@ export default {
     description:
       "I've had the opportunity to work with a variety of technologies throughout my career, and I'm passionate about learning. This list is always being updated.",
     tabsPlaceholder: "[ Interactive tabs component will go here ]",
+    categories: {
+      ai: "Artificial Intelligence",
+      languages: "Programming / Markup / Stylesheet languages",
+      frontend: "Front-end — Frameworks & Libraries",
+      backend: "Back-end — frameworks & libraries",
+      protocols: "Communication protocols (construction & consumption)",
+      databases: "Databases",
+      cloud: "Cloud",
+      deployment: "Work / Deployment environment",
+      others: "Others",
+    },
   },
   experiences: {
     title: "Experience",
@@ -40,7 +51,7 @@ export default {
       wowe: {
         name: "Wowe",
         role: "Fullstack Developer",
-        time: "Feb/2024 - Aug/2024",
+        time: "Nov/2023 - Aug/2024",
         description:
           "Built 100% of the frontend (Flutter and React) and 100% of the backend (Go) for a social network focused on sharing experiences and trends, using clean architecture on both sides. The project used tools such as Google Places, Elasticsearch, RabbitMQ, and Kafka.",
       },
@@ -49,28 +60,28 @@ export default {
         role: "Frontend Developer",
         time: "Nov/2023 - Feb/2024",
         description:
-          "Worked as a frontend developer (React and Flutter Desktop) on a real-time AI video-call translation product, available as a web extension or desktop app.",
+          "Worked as a frontend developer (React and Flutter Desktop) on a real-time AI video-call translation product, available as a Chrome extension or desktop app, with integration support for Teams, Google Meet, and Zoom.",
       },
       cerc: {
         name: "CERC",
         role: "Frontend Developer",
         time: "Dec/2022 - Nov/2023",
         description:
-          "Worked end-to-end from the start on a carbon credit web platform built with Angular.",
+          "Worked end-to-end on building a carbon credit web platform with Angular and the mobile MVP with Flutter, integrated with a REST API.",
       },
       headson: {
         name: "HeadsOn",
         role: "Fullstack Developer",
         time: "Jan/2022 - Dec/2022",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "Using Flutter, React and Go, as a fullstack developer I worked building an app for a financial institution, managing users' digital wallets with a focus on payments and investments.",
       },
       linx: {
         name: "Linx",
         role: "Fullstack Developer",
         time: "Nov/2019 - Dec/2022",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "Using Flutter and Angular, I worked on the Nova Conta Linx digital bank, a white-label project integrated via BFF and GraphQL, delivering a complete financial payments solution.",
       },
     },
   },

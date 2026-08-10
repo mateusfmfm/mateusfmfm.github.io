@@ -19,13 +19,18 @@ export type CvContact = {
   href: string;
 };
 
+export type CvSkillCategory = {
+  title: string;
+  items: string[];
+};
+
 export type CvContent = {
   name: string;
   title: string;
   bio: string;
   contacts: CvContact[];
   skillsTitle: string;
-  skills: string[];
+  skillCategories: CvSkillCategory[];
   experiencesTitle: string;
   experiences: CvExperience[];
   projectsTitle: string;
@@ -96,7 +101,7 @@ const styles = StyleSheet.create({
     paddingRight: 8,
   },
   bodyRight: {
-    width: 130,
+    width: 170,
   },
   sectionTitle: {
     fontSize: 13,
@@ -106,17 +111,19 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: "#e2e8f0",
   },
-  skills: {
-    flexDirection: "column",
-    gap: 6,
+  skillGroup: {
+    marginBottom: 10,
   },
-  skill: {
+  skillCategoryTitle: {
     fontSize: 8,
-    color: "#1d4ed8",
-    backgroundColor: "#eff6ff",
-    paddingVertical: 3,
-    paddingHorizontal: 6,
-    borderRadius: 3,
+    fontFamily: "Helvetica-Bold",
+    color: "#0f172a",
+    marginBottom: 2,
+  },
+  skillCategoryItems: {
+    fontSize: 7,
+    color: "#475569",
+    lineHeight: 1.4,
   },
   item: {
     marginBottom: 10,
@@ -171,7 +178,9 @@ export default function CvDocument({ content }: { content: CvContent }) {
             {content.contacts.map((contact) => (
               <Link key={contact.href} src={contact.href} style={styles.contactLink}>
                 <Text style={styles.contactItem}>
-                  {contact.label}: {contact.value}
+                  {contact.label
+                    ? `${contact.label}: ${contact.value}`
+                    : contact.value}
                 </Text>
               </Link>
             ))}
@@ -196,7 +205,7 @@ export default function CvDocument({ content }: { content: CvContent }) {
                   <Text style={styles.itemDescription}>{experience.description}</Text>
                 </View>
               ))}
-            </View>
+            </View> 
 
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>{content.projectsTitle}</Text>
@@ -213,16 +222,14 @@ export default function CvDocument({ content }: { content: CvContent }) {
           </View>
 
           <View style={styles.bodyRight}>
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>{content.skillsTitle}</Text>
-              <View style={styles.skills}>
-                {content.skills.map((skill) => (
-                  <Text key={skill} style={styles.skill}>
-                    {skill}
-                  </Text>
-                ))}
+            {content.skillCategories.map((category) => (
+              <View key={category.title} style={styles.skillGroup} wrap={false}>
+                <Text style={styles.skillCategoryTitle}>{category.title}</Text>
+                <Text style={styles.skillCategoryItems}>
+                  {category.items.join(", ")}
+                </Text>
               </View>
-            </View>
+            ))}
           </View>
         </View>
       </Page>

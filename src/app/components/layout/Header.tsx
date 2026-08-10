@@ -40,10 +40,19 @@ export default function Header() {
           </nav>
           <Button
             variant="outline"
+            className="relative"
             disabled={isDownloading}
+            aria-busy={isDownloading}
             onClick={() => void handleDownloadCv()}
           >
-            {isDownloading ? "..." : t("header.downloadCv")}
+            <span className={isDownloading ? "invisible" : undefined}>
+              {t("header.downloadCv")}
+            </span>
+            {isDownloading && (
+              <span className="btn-spinner" aria-hidden>
+                <span className="btn-spinner-circle" />
+              </span>
+            )}
           </Button>
           <LanguageSwitcher />
           <div id="theme-toggle-slot"></div>
