@@ -124,6 +124,7 @@ const styles = StyleSheet.create({
     fontSize: 7,
     color: "#475569",
     lineHeight: 1.4,
+    marginBottom: 10,
   },
   item: {
     marginBottom: 10,

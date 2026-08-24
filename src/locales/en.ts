@@ -39,7 +39,8 @@ export default {
   },
   experiences: {
     title: "Experience",
-    description: "Where I've been and what I've built throughout my professional journey.",
+    description:
+      "Where I've been and what I've built throughout my professional journey. This is the list of projects I worked on in continuous production. I also have experience with one-off development across several stacks.",
     items: {
       bancoBv: {
         name: "Banco BV",
@@ -53,7 +54,7 @@ export default {
         role: "Fullstack Developer",
         time: "Nov/2023 - Aug/2024",
         description:
-          "Built 100% of the frontend (Flutter and React) and 100% of the backend (Go) for a social network focused on sharing experiences and trends, using clean architecture on both sides. The project used tools such as Google Places, Elasticsearch, RabbitMQ, and Kafka.",
+          "Built 100% of the frontend (Flutter and React) and 100% of the backend (Go and GraphQL) for a social network focused on sharing experiences and trends, using clean architecture on both sides. The project used tools such as Google Places, Elasticsearch, RabbitMQ, and Kafka.",
       },
       viva: {
         name: "Viva Translate",
@@ -96,7 +97,7 @@ export default {
     },
     wowe: {
       tag: "Fullstack (Go, Flutter)",
-      name: "wowe",
+      name: "won-games",
       description:
         "Led end-to-end development of a social network for sharing experiences and trends.",
     },

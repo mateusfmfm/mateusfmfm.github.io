@@ -11,12 +11,12 @@ export type ExperienceId = (typeof experienceIds)[number];
 
 export const projectItems = [
   {
-    id: "bancoBv",
+    id: "flightTracker",
     stacks: ["Go", "GraphQL", "Redis"],
   },
   {
-    id: "wowe",
-    stacks: ["Go", "Flutter", "React"],
+    id: "wonGames",
+    stacks: ["React", "NextJS", "Strapi", "GraphQL"],
   },
 ] as const;
 

@@ -40,7 +40,7 @@ export default {
   },
   experiences: {
     title: "Experiências",
-    description: "Por onde passei e o que construí ao longo da minha jornada profissional.",
+    description: "Por onde passei e o que construí ao longo da minha jornada profissional. Essa é a relação de projetos que atuei em fluxo contínuo de produção. Possuo também experiência atuando com desenvolvimento pontual em diversas stacks.",
     items: {
       bancoBv: {
         name: "Banco BV",
@@ -54,7 +54,7 @@ export default {
         role: "Desenvolvedor Fullstack",
         time: "Nov/2023 - Ago/2024",
         description:
-          "Desenvolvi 100% do frontend (Flutter e React) e 100% do backend (Go) de um aplicativo de rede social para compartilhamento de experiências e trendings, utilizando arquitetura limpa em ambas as frentes. Projeto baseado com o uso de ferramentas como Google Places, Elasticsearch, RabbitMQ, Kafka entre outros.",
+          "Desenvolvi 100% do frontend (Flutter e React) e 100% do backend (Go e GraphQL) de um aplicativo de rede social para compartilhamento de experiências e trendings, utilizando arquitetura limpa em ambas as frentes. Projeto baseado com o uso de ferramentas como Google Places, Elasticsearch, RabbitMQ, Kafka entre outros.",
       },
       viva: {
         name: "Viva Translate",
