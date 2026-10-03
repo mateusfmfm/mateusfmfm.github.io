@@ -20,11 +20,11 @@ export type SoftSkillId = (typeof softSkillIds)[number];
 export const projectItems = [
   {
     id: "flightTracker",
-    stacks: ["Go", "GraphQL", "Redis"],
+    stacks: ["Angular", "Go", "GraphQL", "Redis"],
   },
   {
     id: "arcadeVault",
-    stacks: ["Go", "React", "gRPC", "GraphQL", "PostgreSQL"],
+    stacks: ["Angular", "Go", "gRPC", "GraphQL", "PostgreSQL"],
   },
 ] as const;
 

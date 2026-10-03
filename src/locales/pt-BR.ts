@@ -131,13 +131,13 @@ export default {
       tag: "Go, React",
       name: "flight-tracker",
       description:
-        "Engine de eventos de alta performance e concorrência em Go que rastreia aeronaves da API do OpenSky Network e transmite atualizações em tempo real para clientes via GraphQL Subscriptions (WebSockets).",
+        "Engine de eventos de alta performance e concorrência em Go e Angular que rastreia aeronaves da API do OpenSky Network e transmite atualizações em tempo real para clientes via GraphQL Subscriptions (WebSockets).",
     },
     arcadeVault: {
-      tag: "Go, React",
+      tag: "Go, Angular",
       name: "arcade-vault",
       description:
-        "Loja de arcades completa, construída com microserviços gRPC + GraphQL, Clean Architecture, PostgreSQL (sqlc/pgx), RabbitMQ e OpenTelemetry -> Jaeger, integrado com gateway de Pagamentos Stripe.",
+        "Loja de arcades completa, construída com Angular, Go, microserviços gRPC + GraphQL, Clean Architecture, PostgreSQL (sqlc/pgx), RabbitMQ e OpenTelemetry -> Jaeger, integrado com gateway de Pagamentos Stripe.",
     },
   }, 
 } as const;
