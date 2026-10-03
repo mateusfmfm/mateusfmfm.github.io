@@ -1,6 +1,6 @@
 import { pdf } from "@react-pdf/renderer";
 import type { TFunction } from "i18next";
-import { experienceIds, projectItems, skillCategories } from "../../data/cv";
+import { educationIds, experienceIds, projectItems, skillCategories, softSkillIds } from "../../data/cv";
 import CvDocument, { type CvContact, type CvContent } from "./CvDocument";
 
 const contactItems = [
@@ -69,6 +69,17 @@ export function buildCvContent(t: TFunction, language: string): CvContent {
       name: t(`projects.${project.id}.name`),
       stacks: [...project.stacks],
       description: t(`projects.${project.id}.description`),
+    })),
+    educationTitle: t("education.title"),
+    education: educationIds.map((id) => ({
+      degree: t(`education.items.${id}.degree`),
+      institution: t(`education.items.${id}.institution`),
+      time: t(`education.items.${id}.time`),
+    })),
+    softSkillsTitle: t("softSkills.title"),
+    softSkills: softSkillIds.map((id) => ({
+      title: t(`softSkills.items.${id}.title`),
+      description: t(`softSkills.items.${id}.description`),
     })),
   };
 }

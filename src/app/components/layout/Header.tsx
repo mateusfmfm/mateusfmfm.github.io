@@ -34,6 +34,12 @@ export default function Header() {
             <a href="#experience" className="nav-link">
               {t("header.experience")}
             </a>
+            <a href="#education" className="nav-link">
+              {t("header.education")}
+            </a>
+            <a href="#soft-skills" className="nav-link">
+              {t("header.softSkills")}
+            </a>
             <a href="#projects" className="nav-link">
               {t("header.projects")}
             </a>

@@ -9,14 +9,22 @@ export const experienceIds = [
 
 export type ExperienceId = (typeof experienceIds)[number];
 
+export const educationIds = ["ufabc", "anhembi"] as const;
+
+export type EducationId = (typeof educationIds)[number];
+
+export const softSkillIds = ["frontendCraft", "codeQuality", "userExperience"] as const;
+
+export type SoftSkillId = (typeof softSkillIds)[number];
+
 export const projectItems = [
   {
     id: "flightTracker",
     stacks: ["Go", "GraphQL", "Redis"],
   },
   {
-    id: "wonGames",
-    stacks: ["React", "NextJS", "Strapi", "GraphQL"],
+    id: "arcadeVault",
+    stacks: ["Go", "React", "gRPC", "GraphQL", "PostgreSQL"],
   },
 ] as const;
 

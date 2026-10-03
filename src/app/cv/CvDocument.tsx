@@ -13,6 +13,17 @@ export type CvProject = {
   description: string;
 };
 
+export type CvEducation = {
+  degree: string;
+  institution: string;
+  time: string;
+};
+
+export type CvSoftSkill = {
+  title: string;
+  description: string;
+};
+
 export type CvContact = {
   label: string;
   value: string;
@@ -35,6 +46,10 @@ export type CvContent = {
   experiences: CvExperience[];
   projectsTitle: string;
   projects: CvProject[];
+  educationTitle: string;
+  education: CvEducation[];
+  softSkillsTitle: string;
+  softSkills: CvSoftSkill[];
 };
 
 const styles = StyleSheet.create({
@@ -115,13 +130,13 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   skillCategoryTitle: {
-    fontSize: 8,
+    fontSize: 9,
     fontFamily: "Helvetica-Bold",
     color: "#0f172a",
     marginBottom: 2,
   },
   skillCategoryItems: {
-    fontSize: 7,
+    fontSize: 8,
     color: "#475569",
     lineHeight: 1.4,
     marginBottom: 10,
@@ -151,7 +166,7 @@ const styles = StyleSheet.create({
     marginBottom: 3,
   },
   itemDescription: {
-    fontSize: 9,
+    fontSize: 10,
     color: "#475569",
   },
   stacks: {
@@ -206,19 +221,6 @@ export default function CvDocument({ content }: { content: CvContent }) {
                   <Text style={styles.itemDescription}>{experience.description}</Text>
                 </View>
               ))}
-            </View> 
-
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>{content.projectsTitle}</Text>
-              {content.projects.map((project) => (
-                <View key={project.name} style={styles.item} wrap={false}>
-                  <Text style={styles.itemName}>{project.name}</Text>
-                  {project.stacks.length > 0 && (
-                    <Text style={styles.stacks}>{project.stacks.join(" · ")}</Text>
-                  )}
-                  <Text style={styles.itemDescription}>{project.description}</Text>
-                </View>
-              ))}
             </View>
           </View>
 
@@ -232,6 +234,40 @@ export default function CvDocument({ content }: { content: CvContent }) {
               </View>
             ))}
           </View>
+        </View>
+
+        <View break style={styles.section}>
+          <Text style={styles.sectionTitle}>{content.projectsTitle}</Text>
+          {content.projects.map((project) => (
+            <View key={project.name} style={styles.item} wrap={false}>
+              <Text style={styles.itemName}>{project.name}</Text>
+              {project.stacks.length > 0 && (
+                <Text style={styles.stacks}>{project.stacks.join(" · ")}</Text>
+              )}
+              <Text style={styles.itemDescription}>{project.description}</Text>
+            </View>
+          ))}
+        </View>
+
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>{content.educationTitle}</Text>
+          {content.education.map((item) => (
+            <View key={`${item.degree}-${item.time}`} style={styles.item} wrap={false}>
+              <Text style={styles.itemName}>{item.degree}</Text>
+              <Text style={styles.itemRole}>{item.institution}</Text>
+              <Text style={styles.itemTime}>{item.time}</Text>
+            </View>
+          ))}
+        </View>
+
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>{content.softSkillsTitle}</Text>
+          {content.softSkills.map((item) => (
+            <View key={item.title} style={styles.item} wrap={false}>
+              <Text style={styles.itemName}>{item.title}</Text>
+              <Text style={styles.itemDescription}>{item.description}</Text>
+            </View>
+          ))}
         </View>
       </Page>
     </Document>
