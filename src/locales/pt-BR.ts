@@ -47,14 +47,14 @@ export default {
     items: {
       bancoBv: {
         name: "Banco BV",
-        role: "Desenvolvedor FrontEnd Sênior (Angular/Flutter)",
+        role: "Desenvolvedor FrontEnd Sênior (Flutter/Angular)",
         time: "Ago/2024 - Atualmente",
         description:
           "Em um aplicativo com 10 milhões de usuários, liderei o desenvolvimento mobile (Flutter) e web (Angular) de produtos voltados a concessão de crédito e empréstimos, ajudando a melhoria continua do código legado e o desenvolvimento de novas features com arquitetura limpa e microapps.",
       },
       wowe: {
         name: "Wowe",
-        role: "Engenheiro de Software (Go/Angular/Flutter)",
+        role: "Engenheiro de Software (Go/Flutter/Angular)",
         time: "Nov/2023 - Ago/2024",
         description:
           "Desenvolvi 100% do backend (Go e GraphQL) e 100% do frontend (Angular e Flutter) de um app de rede social para compartilhar experiências e trendings, utilizando arquitetura limpa em ambas as frentes. Projeto baseado com o uso de ferramentas como GraphQL, Google Places, Elasticsearch, RabbitMQ, Kafka entre outros.",
@@ -75,14 +75,14 @@ export default {
       },
       headson: {
         name: "HeadsOn",
-        role: "Engenheiro de Software (Go/Flutter/Angular)",
+        role: "Engenheiro de Software (Go/Angular/Flutter)",
         time: "Jan/2022 - Dez/2022",
         description:
           "Trabalhando com Go, Flutter, e Angular, atuei como desenvolvedor fullstack na construção de um aplicativo de uma instituição financeira, administrando a carteira digital dos usuários com foco em pagamentos e investimentos.",
       },
       linx: {
         name: "Linx",
-        role: "Desenvolvedor Frontend (Angular/Flutter)",
+        role: "Desenvolvedor Frontend (Flutter/Angular)",
         time: "Nov/2019 - Dez/2022",
         description:
           "Utilizando Angular e Flutter, trabalhei no desenvolvimento do banco digital Nova Conta Linx, em um projeto White Label com a integração via BFF e GraphQL, permitindo uma solução financeira completa em pagamentos.",

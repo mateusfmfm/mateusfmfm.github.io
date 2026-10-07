@@ -47,14 +47,14 @@ export default {
     items: {
       bancoBv: {
         name: "Banco BV",
-        role: "Senior Frontend Developer (Angular/Flutter)",
+        role: "Senior Frontend Developer (Flutter/Angular)",
         time: "Aug/2024 - Present",
         description:
           "In an app with 10 million users, I led mobile (Flutter) and web (Angular) development for credit and loan products, helping improve the legacy codebase and shipping new features with clean architecture and microapps.",
       },
       wowe: {
         name: "Wowe",
-        role: "Software Engineer (Go/Angular/Flutter)",
+        role: "Software Engineer (Go/Flutter/Angular)",
         time: "Nov/2023 - Aug/2024",
         description:
           "Built 100% of the backend (Go and GraphQL) and 100% of the frontend (Angular and Flutter) for a social network app for sharing experiences and trends, using clean architecture on both sides. The project used tools such as GraphQL, Google Places, Elasticsearch, RabbitMQ, and Kafka, among others.",
@@ -75,14 +75,14 @@ export default {
       },
       headson: {
         name: "HeadsOn",
-        role: "Software Engineer (Go/Flutter/Angular)",
+        role: "Software Engineer (Go/Angular/Flutter)",
         time: "Jan/2022 - Dec/2022",
         description:
           "Working with Go, Flutter, and Angular, I worked as a fullstack developer building an app for a financial institution, managing users' digital wallets with a focus on payments and investments.",
       },
       linx: {
         name: "Linx",
-        role: "Frontend Developer (Angular/Flutter)",
+        role: "Frontend Developer (Flutter/Angular)",
         time: "Nov/2019 - Dec/2022",
         description:
           "Using Angular and Flutter, I worked on the Nova Conta Linx digital bank, a white-label project integrated via BFF and GraphQL, delivering a complete financial payments solution.",
