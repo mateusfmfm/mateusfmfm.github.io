@@ -47,7 +47,7 @@ export default {
     items: {
       bancoBv: {
         name: "Banco BV",
-        role: "Desenvolvedor FrontEnd Sênior (Flutter/Angular)",
+        role: "Desenvolvedor Sênior (Flutter/Angular)",
         time: "Ago/2024 - Atualmente",
         description:
           "Em um aplicativo com 10 milhões de usuários, liderei o desenvolvimento mobile (Flutter) e web (Angular) de produtos voltados a concessão de crédito e empréstimos, ajudando a melhoria continua do código legado e o desenvolvimento de novas features com arquitetura limpa e microapps.",
@@ -64,21 +64,21 @@ export default {
         role: "Engenheiro de Software (Flutter Desktop/React/Python)",
         time: "Nov/2023 - Fev/2024",
         description:
-          "Atuei como especialista frontend (React e Flutter Desktop) e na integração com Python Django de um produto de tradução em tempo real de videochamadas baseado em inteligência artificial, disponível como extensão do Chrome ou aplicativo desktop, com integração ao Teams, Google Meet e Zoom.",
+          "Atuei como especialista frontend (React e Flutter Desktop) e na integração com Python e Django de um produto de tradução em tempo real de videochamadas baseado em inteligência artificial, disponível como extensão do Chrome ou aplicativo desktop, com integração ao Teams, Google Meet e Zoom. A integração foi feita direta com código nativo através de Platform e Mathod Channels em C e Swift.",
       },
       cerc: {
         name: "CERC",
-        role: "Engenheiro Frontend (Angular)",
+        role: "Engenheiro Frontend (Angular/Go)",
         time: "Dez/2022 - Nov/2023",
         description:
-          "Atuei integralmente na construção de uma plataforma web de crédito de carbono construída com Angular 13 e o MVP mobile com Flutter, integrado com REST API.",
+          "Atuei integralmente na construção de uma plataforma web de crédito de carbono construída com Angular 13 e o MVP mobile com Flutter, integrado com REST API feito em Go, com ferramentas como RabbitMQ, gRPC, GORM, Postgresql.",
       },
       headson: {
         name: "HeadsOn",
-        role: "Engenheiro de Software (Go/Angular/Flutter)",
+        role: "Engenheiro de Software (Go/React/Flutter)",
         time: "Jan/2022 - Dez/2022",
         description:
-          "Trabalhando com Go, Flutter, e Angular, atuei como desenvolvedor fullstack na construção de um aplicativo de uma instituição financeira, administrando a carteira digital dos usuários com foco em pagamentos e investimentos.",
+          "Trabalhando com Go, Flutter, e React, atuei como desenvolvedor fullstack na construção de um aplicativo de uma fintech, administrando a carteira digital dos usuários com foco em pagamentos e investimentos, com ferramentas como NextJS, BLoC, TailwindCSS, GIN, GORM, OpenTelemetry, com o deploy em Azure.",
       },
       linx: {
         name: "Linx",
@@ -86,6 +86,13 @@ export default {
         time: "Nov/2019 - Dez/2022",
         description:
           "Utilizando Angular e Flutter, trabalhei no desenvolvimento do banco digital Nova Conta Linx, em um projeto White Label com a integração via BFF e GraphQL, permitindo uma solução financeira completa em pagamentos.",
+      },
+      expor: {
+        name: "Expor Manequins",
+        role: "Desenvolvedor Fullstack (Go/Python/Node.js/React)",
+        time: "2017 - 2019",
+        description:
+          "Trabalhei como desenvolvedor fullstack no suporte ao desenvolvimento do sistema interno da empresa, montado em Go e Python, além da plataforma web em Node.js e React.",
       },
     },
   },
@@ -126,7 +133,8 @@ export default {
   },
   projects: {
     title: "Portfólio GitHub",
-    description: "Alguns dos meus projetos pessoais e open source de maior complexidade.",
+    description:
+      "Alguns dos meus projetos pessoais e open source de maior complexidade.",
     flightTracker: {
       tag: "Go, React",
       name: "flight-tracker",
@@ -139,5 +147,5 @@ export default {
       description:
         "Loja de arcades completa, construída com Angular, Go, microserviços gRPC + GraphQL, Clean Architecture, PostgreSQL (sqlc/pgx), RabbitMQ e OpenTelemetry -> Jaeger, integrado com gateway de Pagamentos Stripe.",
     },
-  }, 
+  },
 } as const;

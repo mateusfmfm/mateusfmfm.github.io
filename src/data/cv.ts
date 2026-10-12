@@ -5,6 +5,7 @@ export const experienceIds = [
   "cerc",
   "headson",
   "linx",
+  "expor",
 ] as const;
 
 export type ExperienceId = (typeof experienceIds)[number];

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import bvLogo from "../../../assets/exp/bv.png";
 import cercLogo from "../../../assets/exp/cerc.png";
+import exporLogo from "../../../assets/exp/expor.png";
 import headsonLogo from "../../../assets/exp/headson.png";
 import linxLogo from "../../../assets/exp/linx.png";
 import vivaLogo from "../../../assets/exp/viva.png";
@@ -17,6 +18,7 @@ const logos: Record<ExperienceId, string> = {
   cerc: cercLogo,
   headson: headsonLogo,
   linx: linxLogo,
+  expor: exporLogo,
 };
 
 export default function Experiences() {

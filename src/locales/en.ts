@@ -47,7 +47,7 @@ export default {
     items: {
       bancoBv: {
         name: "Banco BV",
-        role: "Senior Frontend Developer (Flutter/Angular)",
+        role: "Senior Developer (Flutter/Angular)",
         time: "Aug/2024 - Present",
         description:
           "In an app with 10 million users, I led mobile (Flutter) and web (Angular) development for credit and loan products, helping improve the legacy codebase and shipping new features with clean architecture and microapps.",
@@ -64,21 +64,21 @@ export default {
         role: "Software Engineer (Flutter Desktop/React/Python)",
         time: "Nov/2023 - Feb/2024",
         description:
-          "I worked as a frontend specialist (React and Flutter Desktop) and Python Django integration, on a real-time AI video-call translation product, available as a Chrome extension or desktop app, with integration support for Teams, Google Meet, and Zoom.",
+          "I worked as a frontend specialist (React and Flutter Desktop) and on the Python and Django integration of a real-time AI video-call translation product, available as a Chrome extension or desktop app, with integration for Teams, Google Meet, and Zoom. The integration was done directly with native code through Platform and Method Channels in C and Swift.",
       },
       cerc: {
         name: "CERC",
-        role: "Frontend Engineer (Angular)",
+        role: "Frontend Engineer (Angular/Go)",
         time: "Dec/2022 - Nov/2023",
         description:
-          "Worked end-to-end on building a carbon credit web platform with Angular 13 and the mobile MVP with Flutter, integrated with a REST API.",
+          "Worked end-to-end on building a carbon credit web platform with Angular 13 and the mobile MVP with Flutter, integrated with a REST API built in Go, using tools such as RabbitMQ, gRPC, GORM, and PostgreSQL.",
       },
       headson: {
         name: "HeadsOn",
-        role: "Software Engineer (Go/Angular/Flutter)",
+        role: "Software Engineer (Go/React/Flutter)",
         time: "Jan/2022 - Dec/2022",
         description:
-          "Working with Go, Flutter, and Angular, I worked as a fullstack developer building an app for a financial institution, managing users' digital wallets with a focus on payments and investments.",
+          "Working with Go, Flutter, and React, I worked as a fullstack developer building an app for a fintech, managing users' digital wallets with a focus on payments and investments, using tools such as NextJS, BLoC, TailwindCSS, GIN, GORM, and OpenTelemetry, deployed on Azure.",
       },
       linx: {
         name: "Linx",
@@ -86,6 +86,13 @@ export default {
         time: "Nov/2019 - Dec/2022",
         description:
           "Using Angular and Flutter, I worked on the Nova Conta Linx digital bank, a white-label project integrated via BFF and GraphQL, delivering a complete financial payments solution.",
+      },
+      expor: {
+        name: "Expor Manequins",
+        role: "Fullstack Developer (Go/Python/Node.js/React)",
+        time: "2017 - 2019",
+        description:
+          "I worked as a fullstack developer supporting the development of the company's internal system, built in Go and Python, as well as the web platform in Node.js and React.",
       },
     },
   },

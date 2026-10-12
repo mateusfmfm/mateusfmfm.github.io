@@ -236,7 +236,7 @@ export default function CvDocument({ content }: { content: CvContent }) {
           </View>
         </View>
 
-        <View break style={styles.section}>
+        <View style={styles.section}>
           <Text style={styles.sectionTitle}>{content.projectsTitle}</Text>
           {content.projects.map((project) => (
             <View key={project.name} style={styles.item} wrap={false}>
