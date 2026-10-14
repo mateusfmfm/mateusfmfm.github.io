@@ -12,7 +12,7 @@ export default {
   intro: {
     badge: "🚀 Available for new projects",
     title: "I'm Mateus Félix",
-    bio: "Hi, I'm a software developer from Santos/SP with 10 years of experience, focused on Go, Angular, Flutter, and React. Passionate about learning and building software solutions.",
+    bio: "Hi, I'm a software developer from Santos/SP with 10 years of experience. Passionate about learning and building software solutions.",
   },
   contacts: {
     location: "Location",
@@ -68,14 +68,14 @@ export default {
       },
       cerc: {
         name: "CERC",
-        role: "Frontend Engineer (Angular/Go)",
+        role: "Frontend Engineer (Angular/Flutter/Go)",
         time: "Dec/2022 - Nov/2023",
         description:
           "Worked end-to-end on building a carbon credit web platform with Angular 13 and the mobile MVP with Flutter, integrated with a REST API built in Go, using tools such as RabbitMQ, gRPC, GORM, and PostgreSQL.",
       },
       headson: {
         name: "HeadsOn",
-        role: "Software Engineer (Go/React/Flutter)",
+        role: "Software Engineer (Flutter/Go/React)",
         time: "Jan/2022 - Dec/2022",
         description:
           "Working with Go, Flutter, and React, I worked as a fullstack developer building an app for a fintech, managing users' digital wallets with a focus on payments and investments, using tools such as NextJS, BLoC, TailwindCSS, GIN, GORM, and OpenTelemetry, deployed on Azure.",
@@ -90,7 +90,7 @@ export default {
       expor: {
         name: "Expor Manequins",
         role: "Fullstack Developer (Go/Python/Node.js/React)",
-        time: "2017 - 2019",
+        time: "Jan/2017 - Oct/2019",
         description:
           "I worked as a fullstack developer supporting the development of the company's internal system, built in Go and Python, as well as the web platform in Node.js and React.",
       },
