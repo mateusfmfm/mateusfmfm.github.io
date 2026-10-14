@@ -107,6 +107,15 @@ const styles = StyleSheet.create({
   section: {
     marginBottom: 16,
   },
+  educationSection: {
+    marginBottom: 8,
+  },
+  softSkillsSection: {
+    marginBottom: 0,
+  },
+  softSkillItem: {
+    marginBottom: 4,
+  },
   body: {
     flexDirection: "row",
     alignItems: "flex-start",
@@ -174,6 +183,13 @@ const styles = StyleSheet.create({
     fontSize: 8,
     color: "#2563eb",
     marginBottom: 3,
+  },
+  educationRow: {
+    flexDirection: "row",
+    gap: 16,
+  },
+  educationItem: {
+    width: "48%",
   },
 });
 
@@ -256,21 +272,27 @@ export default function CvDocument({ content }: { content: CvContent }) {
           ))}
         </View>
 
-        <View style={styles.section}>
+        <View style={[styles.section, styles.educationSection]}>
           <Text style={styles.sectionTitle}>{content.educationTitle}</Text>
-          {content.education.map((item) => (
-            <View key={`${item.degree}-${item.time}`} style={styles.item} wrap={false}>
-              <Text style={styles.itemName}>{item.degree}</Text>
-              <Text style={styles.itemRole}>{item.institution}</Text>
-              <Text style={styles.itemTime}>{item.time}</Text>
-            </View>
-          ))}
+          <View style={styles.educationRow}>
+            {content.education.map((item) => (
+              <View
+                key={`${item.degree}-${item.time}`}
+                style={styles.educationItem}
+                wrap={false}
+              >
+                <Text style={styles.itemName}>{item.degree}</Text>
+                <Text style={styles.itemRole}>{item.institution}</Text>
+                <Text style={styles.itemTime}>{item.time}</Text>
+              </View>
+            ))}
+          </View>
         </View>
 
-        <View style={styles.section}>
+        <View style={[styles.section, styles.softSkillsSection]}>
           <Text style={styles.sectionTitle}>{content.softSkillsTitle}</Text>
           {content.softSkills.map((item) => (
-            <View key={item.title} style={styles.item} wrap={false}>
+            <View key={item.title} style={styles.softSkillItem} wrap={false}>
               <Text style={styles.itemName}>{item.title}</Text>
               <Text style={styles.itemDescription}>{item.description}</Text>
             </View>
