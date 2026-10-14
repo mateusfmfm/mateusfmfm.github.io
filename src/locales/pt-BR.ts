@@ -147,5 +147,11 @@ export default {
       description:
         "Loja de arcades completa, construída com Angular, Go, microserviços gRPC + GraphQL, Clean Architecture, PostgreSQL (sqlc/pgx), RabbitMQ e OpenTelemetry -> Jaeger, integrado com gateway de Pagamentos Stripe.",
     },
+    setTheTheme: {
+      tag: "Flutter",
+      name: "flutter-set-the-theme",
+      description:
+        "Projeto white-label em Flutter, pronto para rodar com a flag --flavor, adaptando cores e assets para cada tema configurado.",
+    },
   },
 } as const;

@@ -11,6 +11,7 @@ export type CvProject = {
   name: string;
   stacks: string[];
   description: string;
+  href?: string;
 };
 
 export type CvEducation = {
@@ -240,7 +241,13 @@ export default function CvDocument({ content }: { content: CvContent }) {
           <Text style={styles.sectionTitle}>{content.projectsTitle}</Text>
           {content.projects.map((project) => (
             <View key={project.name} style={styles.item} wrap={false}>
-              <Text style={styles.itemName}>{project.name}</Text>
+              {project.href ? (
+                <Link src={project.href} style={styles.contactLink}>
+                  <Text style={styles.itemName}>{project.name}</Text>
+                </Link>
+              ) : (
+                <Text style={styles.itemName}>{project.name}</Text>
+              )}
               {project.stacks.length > 0 && (
                 <Text style={styles.stacks}>{project.stacks.join(" · ")}</Text>
               )}

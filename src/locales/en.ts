@@ -146,5 +146,11 @@ export default {
       description:
         "Full arcade store built with Angular, Go,gRPC + GraphQL microservices, Clean Architecture, PostgreSQL (sqlc/pgx), RabbitMQ, and OpenTelemetry -> Jaeger, integrated with the Stripe payment gateway.",
     },
+    setTheTheme: {
+      tag: "Flutter",
+      name: "flutter-set-the-theme",
+      description:
+        "White-label Flutter project, ready to run with the --flavor flag, adapting colors and assets for each configured theme.",
+    },
   },
 } as const;

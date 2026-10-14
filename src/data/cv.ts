@@ -27,6 +27,11 @@ export const projectItems = [
     id: "arcadeVault",
     stacks: ["Angular", "Go", "gRPC", "GraphQL", "PostgreSQL"],
   },
+  {
+    id: "setTheTheme",
+    stacks: ["Flutter"],
+    href: "https://github.com/mateusfmfm/flutter.mobile-Set-The-Theme",
+  },
 ] as const;
 
 export type ProjectId = (typeof projectItems)[number]["id"];

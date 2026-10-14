@@ -3,6 +3,7 @@ interface ProjectProps {
   stacks: string[];
   description: string;
   icons: string[];
+  href?: string;
 }
 
 export default function Project({
@@ -10,11 +11,25 @@ export default function Project({
   stacks,
   description,
   icons,
+  href,
 }: ProjectProps) {
   return (
     <article className="card">
       <div className="flex items-start justify-between gap-4">
-        <h3 className="card-title">{title}</h3>
+        <h3 className="card-title">
+          {href ? (
+            <a
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              {title}
+            </a>
+          ) : (
+            title
+          )}
+        </h3>
         {icons.length > 0 && (
           <div className="flex items-center gap-2 shrink-0">
             {icons.map((icon, index) => (

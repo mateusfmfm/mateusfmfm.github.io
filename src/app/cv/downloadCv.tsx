@@ -69,6 +69,7 @@ export function buildCvContent(t: TFunction, language: string): CvContent {
       name: t(`projects.${project.id}.name`),
       stacks: [...project.stacks],
       description: t(`projects.${project.id}.description`),
+      href: "href" in project ? project.href : undefined,
     })),
     educationTitle: t("education.title"),
     education: educationIds.map((id) => ({
