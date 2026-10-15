@@ -12,7 +12,7 @@ export default {
   intro: {
     badge: "🚀 Disponível para novos projetos",
     title: "Sou Mateus Félix",
-    bio: "Olá, sou desenvolvedor de software de Santos/SP com 10 anos de experiência. Apaixonado por estudos e desenvolvimento de soluções em software.",
+    bio: "Olá, sou engenheiro de software de Santos/SP com 10 anos de experiência. Apaixonado por estudos e desenvolvimento de soluções em software.",
   },
   contacts: {
     location: "Localização",
@@ -21,7 +21,7 @@ export default {
     telegram: "Telegram",
     linkedin: "LinkedIn",
     github: "GitHub",
-    whatsapp: "WhatsApp",
+    whatsapp: "Celular/WhatsApp",
   },
   skills: {
     title: "Principais skills",

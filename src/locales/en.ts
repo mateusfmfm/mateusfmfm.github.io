@@ -12,7 +12,7 @@ export default {
   intro: {
     badge: "🚀 Available for new projects",
     title: "I'm Mateus Félix",
-    bio: "Hi, I'm a software developer from Santos/SP with 10 years of experience. Passionate about learning and building software solutions.",
+    bio: "Hi, I'm a software engineer from Santos/Brazil with 10 years of experience. Passionate about learning and building software solutions.",
   },
   contacts: {
     location: "Location",
@@ -21,7 +21,7 @@ export default {
     telegram: "Telegram",
     linkedin: "LinkedIn",
     github: "GitHub",
-    whatsapp: "WhatsApp",
+    whatsapp: "Phone/WhatsApp",
   },
   skills: {
     title: "Main skills",

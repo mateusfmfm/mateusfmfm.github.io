@@ -28,24 +28,22 @@ const contactItems = [
 
 const whatsappContact = {
   id: "whatsapp",
-  href: "https://wa.me/5513991855979",
-  value: "+55 13 99185-5979",
+  href: "https://wa.me/5514997302277",
+  value: "+55 14 99730 2277",
 } as const;
 
-export function buildCvContent(t: TFunction, language: string): CvContent {
+export function buildCvContent(t: TFunction): CvContent {
   const contacts: CvContact[] = contactItems.map((contact) => ({
     label: contact.id === "location" ? "" : t(`contacts.${contact.id}`),
     value: "valueKey" in contact ? t(contact.valueKey) : contact.value,
     href: contact.href,
   }));
 
-  if (language.startsWith("pt")) {
-    contacts.splice(2, 0, {
-      label: t("contacts.whatsapp"),
-      value: whatsappContact.value,
-      href: whatsappContact.href,
-    });
-  }
+  contacts.splice(2, 0, {
+    label: t("contacts.whatsapp"),
+    value: whatsappContact.value,
+    href: whatsappContact.href,
+  });
 
   return {
     name: "Mateus Félix",
@@ -86,7 +84,7 @@ export function buildCvContent(t: TFunction, language: string): CvContent {
 }
 
 export async function downloadCv(t: TFunction, language: string) {
-  const content = buildCvContent(t, language);
+  const content = buildCvContent(t);
   const blob = await pdf(<CvDocument content={content} />).toBlob();
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");

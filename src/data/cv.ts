@@ -30,7 +30,6 @@ export const projectItems = [
   {
     id: "setTheTheme",
     stacks: ["Flutter"],
-    href: "https://github.com/mateusfmfm/flutter.mobile-Set-The-Theme",
   },
 ] as const;
 
