@@ -21,7 +21,11 @@ export default function Projects() {
             stacks={[...project.stacks]}
             description={t(`projects.${project.id}.description`)}
             icons={[]}
-            href={"href" in project ? project.href : undefined}
+            href={
+              "href" in project && typeof project.href === "string"
+                ? project.href
+                : undefined
+            }
           />
         ))}
       </div>
