@@ -50,35 +50,35 @@ export default {
         role: "Desenvolvedor Sênior (Flutter/Angular)",
         time: "Ago/2024 - Atualmente",
         description:
-          "Em um aplicativo com 10 milhões de usuários, liderei o desenvolvimento mobile (Flutter) e web (Angular) de produtos voltados a concessão de crédito e empréstimos, ajudando a melhoria continua do código legado e o desenvolvimento de novas features com arquitetura limpa e microapps.",
+          "Em um aplicativo com 10 milhões de usuários, liderei o desenvolvimento mobile (Flutter) e web (Angular) de produtos voltados a concessão de crédito e empréstimos, ajudando a melhoria continua do código legado e o desenvolvimento de novas features com o uso de arquitetura limpa em mais de 200 microapps interligados, utilizando BLoC e Riverpod em gerencia de estado, testes unitários e de widgets, integração REST, WebSockets, DeepLink e Push Notifications.",
       },
       wowe: {
         name: "Wowe",
         role: "Engenheiro de Software (Go/Flutter/Angular)",
         time: "Nov/2023 - Ago/2024",
         description:
-          "Desenvolvi 100% do backend (Go e GraphQL) e 100% do frontend (Angular e Flutter) de um app de rede social para compartilhar experiências e trendings, utilizando arquitetura limpa em ambas as frentes. Projeto baseado com o uso de ferramentas como GraphQL, Google Places, Elasticsearch, RabbitMQ, Kafka entre outros.",
+          "Desenvolvi 100% do backend (Go e GraphQL) e 100% do frontend (Angular e Flutter) de um app de rede social para compartilhar experiências e trendings, utilizando arquitetura limpa em ambas as frentes. Projeto baseado com o uso de ferramentas como GraphQL, Google Places, Elasticsearch, entre outros, integração completa com GraphQL e WebSocket e uso de Google Cloud Run para deploy e consumo de serviços.",
       },
       viva: {
         name: "Viva Translate",
         role: "Engenheiro de Software (Flutter Desktop/React/Python)",
         time: "Nov/2023 - Fev/2024",
         description:
-          "Atuei como especialista frontend (React e Flutter Desktop) e na integração com Python e Django de um produto de tradução em tempo real de videochamadas baseado em inteligência artificial, disponível como extensão do Chrome ou aplicativo desktop, com integração ao Teams, Google Meet e Zoom. A integração foi feita direta com código nativo através de Platform e Mathod Channels em C e Swift.",
+          "Em um produto baseado em IA, atuei como especialista frontend (Flutter Desktop e React) e na integração com Python e Django de um produto de tradução em tempo real de videochamadas com inteligência artificial, disponível como extensão do Chrome ou aplicativo desktop, com integração ao Teams, Google Meet e Zoom. A integração foi feita direta com código nativo através de Platform e Mathod Channels em C e Swift.",
       },
       cerc: {
         name: "CERC",
         role: "Engenheiro Frontend (Angular/Flutter/Go)",
         time: "Dez/2022 - Nov/2023",
         description:
-          "Atuei integralmente na construção de uma plataforma web de crédito de carbono construída com Angular 13 e o MVP mobile com Flutter, integrado com REST API feito em Go, com ferramentas como RabbitMQ, gRPC, GORM, Postgresql.",
+          "Atuei integralmente na construção de uma plataforma web de crédito de carbono construída com Angular 14 e o MVP mobile com Flutter, integrado com REST API feito em Go, com ferramentas como RabbitMQ, gRPC, GORM, Postgresql em uma arquitetura de Microserviços.",
       },
       headson: {
         name: "HeadsOn",
         role: "Engenheiro de Software (Flutter/Go/React)",
         time: "Jan/2022 - Dez/2022",
         description:
-          "Trabalhando com Go, Flutter, e React, atuei como desenvolvedor fullstack na construção de um aplicativo de uma fintech, administrando a carteira digital dos usuários com foco em pagamentos e investimentos, com ferramentas como NextJS, BLoC, TailwindCSS, GIN, GORM, OpenTelemetry, com o deploy em Azure.",
+          "Trabalhando com Go, Flutter, e React, atuei como desenvolvedor fullstack na construção de um aplicativo de uma fintech, administrando a carteira digital dos usuários com foco em pagamentos e investimentos, com ferramentas como NextJS, Zustand, BLoC, TailwindCSS, GIN, GORM, OpenTelemetry, com o deploy em Azure.",
       },
       linx: {
         name: "Linx",
