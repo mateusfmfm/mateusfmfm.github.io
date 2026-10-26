@@ -75,6 +75,7 @@ export function buildCvContent(t: TFunction): CvContent {
       degree: t(`education.items.${id}.degree`),
       institution: t(`education.items.${id}.institution`),
       time: t(`education.items.${id}.time`),
+      description: id === "fiap" ? t("education.items.fiap.description") : undefined,
     })),
     softSkillsTitle: t("softSkills.title"),
     softSkills: softSkillIds.map((id) => ({

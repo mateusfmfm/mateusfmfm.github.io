@@ -10,7 +10,7 @@ export const experienceIds = [
 
 export type ExperienceId = (typeof experienceIds)[number];
 
-export const educationIds = ["ufabc", "anhembi"] as const;
+export const educationIds = ["fiap", "ufabc", "anhembi"] as const;
 
 export type EducationId = (typeof educationIds)[number];
 

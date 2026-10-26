@@ -12,7 +12,7 @@ export default {
   intro: {
     badge: "🚀 Disponível para novos projetos",
     title: "Sou Mateus Félix",
-    bio: "Olá, sou engenheiro de software de Santos/SP com 10 anos de experiência. Apaixonado por estudos e desenvolvimento de soluções em software.",
+    bio: "Olá, sou engenheiro de software de Santos/SP com 10 anos de experiência. Atualmente curso Pós-graduação em Inteligência Artificial para Desenvolvedores na FIAP. Apaixonado por estudos e desenvolvimento de soluções em software.",
   },
   contacts: {
     location: "Localização",
@@ -99,6 +99,13 @@ export default {
   education: {
     title: "Educação",
     items: {
+      fiap: {
+        degree: "Pós-graduação em Inteligência Artificial para Desenvolvedores",
+        institution: "FIAP",
+        time: "Cursando",
+        description:
+          "Pós-graduação para quem desenvolve software e quer aplicar Inteligência Artificial, Machine Learning e Processamento de Linguagem Natural. O curso cobre LLMs, IA generativa, fine-tuning e RAG, análise de texto, áudio e vídeo, e a implementação de modelos em nuvem com AWS e Azure.",
+      },
       ufabc: {
         degree: "Bacharelado em Ciência e Tecnologia",
         institution: "Universidade Federal do ABC",

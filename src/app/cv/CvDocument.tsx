@@ -18,6 +18,7 @@ export type CvEducation = {
   degree: string;
   institution: string;
   time: string;
+  description?: string;
 };
 
 export type CvSoftSkill = {
@@ -274,18 +275,30 @@ export default function CvDocument({ content }: { content: CvContent }) {
 
         <View style={[styles.section, styles.educationSection]}>
           <Text style={styles.sectionTitle}>{content.educationTitle}</Text>
-          <View style={styles.educationRow}>
-            {content.education.map((item) => (
-              <View
-                key={`${item.degree}-${item.time}`}
-                style={styles.educationItem}
-                wrap={false}
-              >
+          {content.education
+            .filter((item) => item.description)
+            .map((item) => (
+              <View key={`${item.degree}-${item.time}`} style={styles.item} wrap={false}>
                 <Text style={styles.itemName}>{item.degree}</Text>
                 <Text style={styles.itemRole}>{item.institution}</Text>
                 <Text style={styles.itemTime}>{item.time}</Text>
+                <Text style={styles.itemDescription}>{item.description}</Text>
               </View>
             ))}
+          <View style={styles.educationRow}>
+            {content.education
+              .filter((item) => !item.description)
+              .map((item) => (
+                <View
+                  key={`${item.degree}-${item.time}`}
+                  style={styles.educationItem}
+                  wrap={false}
+                >
+                  <Text style={styles.itemName}>{item.degree}</Text>
+                  <Text style={styles.itemRole}>{item.institution}</Text>
+                  <Text style={styles.itemTime}>{item.time}</Text>
+                </View>
+              ))}
           </View>
         </View>
 

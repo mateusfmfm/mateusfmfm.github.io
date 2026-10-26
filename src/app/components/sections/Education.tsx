@@ -18,6 +18,9 @@ export default function Education() {
             <h3 className="card-title">{t(`education.items.${id}.degree`)}</h3>
             <span className="company-role">{t(`education.items.${id}.institution`)}</span>
             <span className="company-time">{t(`education.items.${id}.time`)}</span>
+            {id === "fiap" && (
+              <p className="card-body mt-3">{t("education.items.fiap.description")}</p>
+            )}
           </article>
         ))}
       </div>
