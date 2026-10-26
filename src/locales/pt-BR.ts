@@ -12,7 +12,7 @@ export default {
   intro: {
     badge: "🚀 Disponível para novos projetos",
     title: "Sou Mateus Félix",
-    bio: "Olá, sou engenheiro de software de Santos/SP com 10 anos de experiência. Atualmente curso Pós-graduação em Inteligência Artificial para Desenvolvedores na FIAP. Apaixonado por estudos e desenvolvimento de soluções em software.",
+    bio: "Olá, sou engenheiro de software de Santos/SP com 10 anos de experiência. Apaixonado por estudos e desenvolvimento de soluções em software, atualmente curso Pós-graduação em Inteligência Artificial para Desenvolvedores na FIAP.",
   },
   contacts: {
     location: "Localização",

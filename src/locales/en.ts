@@ -12,7 +12,7 @@ export default {
   intro: {
     badge: "🚀 Available for new projects",
     title: "I'm Mateus Félix",
-    bio: "Hi, I'm a software engineer from Santos/Brazil with 10 years of experience. I'm currently pursuing a postgraduate degree in IA Engineering for Developers at FIAP. Passionate about learning and building software solutions.",
+    bio: "Hi, I'm a software engineer from Santos/Brazil with 10 years of experience. Passionate about learning and building software solutions, I'm currently pursuing a postgraduate degree in IA Engineering for Developers at FIAP.",
   },
   contacts: {
     location: "Location",
