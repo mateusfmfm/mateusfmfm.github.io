@@ -102,9 +102,9 @@ export default {
       fiap: {
         degree: "Pós-graduação em Inteligência Artificial para Desenvolvedores",
         institution: "FIAP",
-        time: "Cursando",
+        time: "Cursando - Out/2026 a Jul/2027",
         description:
-          "Pós-graduação para quem desenvolve software e quer aplicar Inteligência Artificial, Machine Learning e Processamento de Linguagem Natural. O curso cobre LLMs, IA generativa, fine-tuning e RAG, análise de texto, áudio e vídeo, e a implementação de modelos em nuvem com AWS e Azure.",
+          "Pós-graduação focada em desenvolvimento de software aplicado a Inteligência Artificial, Machine Learning e Processamento de Linguagem Natural. O curso cobre LLMs, IA generativa, fine-tuning e RAG, análise de texto, áudio e vídeo, e a implementação de modelos em nuvem com AWS e Azure.",
       },
       ufabc: {
         degree: "Bacharelado em Ciência e Tecnologia",

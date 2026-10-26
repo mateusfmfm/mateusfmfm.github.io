@@ -102,9 +102,9 @@ export default {
       fiap: {
         degree: "Postgraduate Degree in IA Engineering for Developers",
         institution: "FIAP",
-        time: "In progress",
+        time: "In progress - Oct/2026 to Jul/2027",
         description:
-          "Postgraduate program for software developers applying Artificial Intelligence, Machine Learning, and Natural Language Processing. It covers LLMs, generative AI, fine-tuning and RAG, analysis of text, audio, and video, and implementing models in the cloud with AWS and Azure.",
+          "Postgraduate program focused on software development applied to Artificial Intelligence, Machine Learning, and Natural Language Processing. It covers LLMs, generative AI, fine-tuning and RAG, analysis of text, audio, and video, and implementing models in the cloud with AWS and Azure.",
       },
       ufabc: {
         degree: "Bachelor's Degree in Science and Technology",
