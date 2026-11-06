@@ -88,11 +88,11 @@ export default {
           "Using Angular and Flutter, I worked on the Nova Conta Linx digital bank, a white-label project integrated via BFF and GraphQL, delivering a complete financial payments solution.",
       },
       expor: {
-        name: "Expor Manequins",
+        name: "Expor Mannequins",
         role: "Fullstack Developer (Go/Python/Node.js/React)",
         time: "Jan/2017 - Oct/2019",
         description:
-          "I worked as a fullstack developer supporting the development of the company's internal system, built in Go and Python, as well as the web platform in Node.js and React.",
+          "I worked as a fullstack developer supporting the development of the company's internal system based in logistics, supply chain, transport and inventory management, built in Go and Python, as well as the web platform in Node.js and React.",
       },
     },
   },

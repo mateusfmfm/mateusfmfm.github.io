@@ -92,7 +92,7 @@ export default {
         role: "Desenvolvedor Fullstack (Go/Python/Node.js/React)",
         time: "Jan/2017 - Out/2019",
         description:
-          "Trabalhei como desenvolvedor fullstack no suporte ao desenvolvimento do sistema interno da empresa, montado em Go e Python, além da plataforma web em Node.js e React.",
+          "Trabalhei como desenvolvedor fullstack no suporte ao desenvolvimento do sistema interno da empresa, voltado a logística, cadeia de suprimentos, transporte e gestão de estoque, montado em Go e Python, além da plataforma web em Node.js e React.",
       },
     },
   },
