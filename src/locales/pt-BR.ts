@@ -46,7 +46,7 @@ export default {
       "Por onde passei e o que construí ao longo da minha jornada profissional. Essa é a relação de projetos que atuei em fluxo contínuo de produção. Possuo também experiência atuando com desenvolvimento pontual em diversas stacks.",
     items: {
       bancoBv: {
-        name: "Banco BV",
+        name: "Banco BV (via 200DEV)",
         role: "Desenvolvedor Sênior (Flutter/Angular)",
         time: "Ago/2024 - Atualmente",
         description:
@@ -67,7 +67,7 @@ export default {
           "Em um produto baseado em IA, atuei como especialista frontend (Flutter Desktop e React) e na integração com Python e Django de um produto de tradução em tempo real de videochamadas com inteligência artificial, disponível como extensão do Chrome ou aplicativo desktop, com integração ao Teams, Google Meet e Zoom. A integração foi feita direta com código nativo através de Platform e Mathod Channels em C e Swift.",
       },
       cerc: {
-        name: "CERC",
+        name: "CERC (via 200DEV)",
         role: "Engenheiro Frontend (Angular/Flutter/Go)",
         time: "Dez/2022 - Nov/2023",
         description:
