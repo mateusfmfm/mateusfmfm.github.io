@@ -113,8 +113,6 @@ export function buildCvContent(t: TFunction): CvContent {
       name: t(`projects.${project.id}.name`),
       stacks: [...project.stacks],
       description: t(`projects.${project.id}.description`),
-      href:
-        "href" in project && typeof project.href === "string" ? project.href : undefined,
     })),
     educationTitle: t("cv.education"),
     education: educationIds

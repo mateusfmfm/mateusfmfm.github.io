@@ -13,7 +13,6 @@ export type CvProject = {
   name: string;
   stacks: string[];
   description: string;
-  href?: string;
 };
 
 export type CvEducation = {
@@ -119,6 +118,9 @@ const styles = StyleSheet.create({
     marginTop: 8,
     marginBottom: 1,
   },
+  entryTitleFirst: {
+    marginTop: 0,
+  },
   meta: {
     fontFamily: "Helvetica-Oblique",
     fontSize: 9,
@@ -185,9 +187,11 @@ export default function CvDocument({ content }: { content: CvContent }) {
         ))}
 
         <Text style={styles.sectionTitle}>{content.experiencesTitle}</Text>
-        {content.experiences.map((experience) => (
+        {content.experiences.map((experience, index) => (
           <View key={`${experience.name}-${experience.time}`}>
-            <Text style={styles.jobTitle}>{experience.role}</Text>
+            <Text style={index === 0 ? [styles.jobTitle, styles.entryTitleFirst] : styles.jobTitle}>
+              {experience.role}
+            </Text>
             <Text style={styles.meta}>
               {experience.name} | {experience.time}
             </Text>
@@ -200,15 +204,11 @@ export default function CvDocument({ content }: { content: CvContent }) {
         ))}
 
         <Text style={styles.sectionTitle}>{content.projectsTitle}</Text>
-        {content.projects.map((project) => (
+        {content.projects.map((project, index) => (
           <View key={project.name}>
-            {project.href ? (
-              <Link src={project.href} style={styles.jobTitle}>
-                <Text style={styles.jobTitle}>{project.name}</Text>
-              </Link>
-            ) : (
-              <Text style={styles.jobTitle}>{project.name}</Text>
-            )}
+            <Text style={index === 0 ? [styles.jobTitle, styles.entryTitleFirst] : styles.jobTitle}>
+              {project.name}
+            </Text>
             {project.stacks.length > 0 && (
               <Text style={styles.body}>{project.stacks.join(" · ")}</Text>
             )}
@@ -217,9 +217,11 @@ export default function CvDocument({ content }: { content: CvContent }) {
         ))}
 
         <Text style={styles.sectionTitle}>{content.educationTitle}</Text>
-        {content.education.map((item) => (
+        {content.education.map((item, index) => (
           <View key={`${item.degree}-${item.time}`}>
-            <Text style={styles.jobTitle}>{item.degree}</Text>
+            <Text style={index === 0 ? [styles.jobTitle, styles.entryTitleFirst] : styles.jobTitle}>
+              {item.degree}
+            </Text>
             <Text style={styles.meta}>
               {item.institution} | {item.time}
             </Text>

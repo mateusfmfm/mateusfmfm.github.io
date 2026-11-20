@@ -44,7 +44,7 @@ export default {
         "Deployed the application on Azure.",
       ],
     },
-    projects: "Projects",
+    projects: "GitHub Projects",
     education: "Education",
     softSkills: "Soft Skills",
     softSkillBullets: {
