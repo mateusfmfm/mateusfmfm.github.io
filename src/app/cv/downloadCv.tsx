@@ -1,68 +1,102 @@
 import { pdf } from "@react-pdf/renderer";
 import type { TFunction } from "i18next";
-import { educationIds, experienceIds, projectItems, skillCategories, softSkillIds } from "../../data/cv";
-import CvDocument, { type CvContact, type CvContent } from "./CvDocument";
+import { educationIds, experienceIds, projectItems, softSkillIds } from "../../data/cv";
+import CvDocument, { type CvContactPart, type CvContent } from "./CvDocument";
 
-const contactItems = [
-  {
-    id: "location",
-    href: "https://www.google.com/maps/search/?api=1&query=Santos,+Brasil",
-    valueKey: "contacts.locationValue" as const,
-  },
-  {
-    id: "email",
-    href: "mailto:mateusfmfm@outlook.com",
-    value: "mateusfmfm@outlook.com",
-  },
-  {
-    id: "telegram",
-    href: "https://t.me/mateusfmfm",
-    value: "@mateusfmfm",
-  },
-  {
-    id: "github",
-    href: "https://github.com/mateusfmfm",
-    value: "mateusfmfm",
-  },
-] as const;
-
-const whatsappContact = {
-  id: "whatsapp",
-  href: "https://wa.me/5514997302277",
-  value: "+55 14 99730 2277",
+const cvSkillItems = {
+  languages: ["Go", "Dart", "JavaScript", "TypeScript", "Python", "CSS3"],
+  frontend: [
+    "Flutter",
+    "Angular",
+    "React",
+    "React Native",
+    "Bootstrap",
+    "Material-UI",
+    "Tailwind CSS",
+    "Panda CSS",
+    "Styled Components",
+    "Sass",
+  ],
+  backend: ["Go", "Gin", "Chi", "Echo", "Fiber", "Gorm", "Next.js", "Django", "FastAPI", "Express"],
+  protocols: ["REST", "GraphQL", "WebSocket", "SSE", "gRPC"],
+  databases: ["MySQL", "MariaDB", "PostgreSQL", "MongoDB", "MSSQL", "SQLite"],
+  cloud: ["Google Cloud", "AWS", "Azure"],
+  devops: [
+    "Docker",
+    "Git",
+    "Heroku",
+    "VPS (DigitalOcean, Linode)",
+    "Redis",
+    "Elasticsearch",
+    "RabbitMQ",
+    "OpenTelemetry",
+  ],
+  ai: ["Cursor", "Claude", "Copilot", "OpenAI", "Gemini", "DeepSeek"],
+  practices: [
+    "Clean Architecture",
+    "Clean Code",
+    "SOLID",
+    "Unit Testing",
+    "CI/CD",
+    "Scrum",
+    "Microservices",
+  ],
 } as const;
 
-export function buildCvContent(t: TFunction): CvContent {
-  const contacts: CvContact[] = contactItems.map((contact) => ({
-    label: contact.id === "location" ? "" : t(`contacts.${contact.id}`),
-    value: "valueKey" in contact ? t(contact.valueKey) : contact.value,
-    href: contact.href,
-  }));
+const cvSkillCategoryIds = [
+  "languages",
+  "frontend",
+  "backend",
+  "protocols",
+  "databases",
+  "cloud",
+  "devops",
+  "ai",
+  "practices",
+] as const;
 
-  contacts.splice(2, 0, {
-    label: t("contacts.whatsapp"),
-    value: whatsappContact.value,
-    href: whatsappContact.href,
-  });
+export function buildCvContent(t: TFunction): CvContent {
+  const contactLines: CvContactPart[][] = [
+    [
+      {
+        text: t("contacts.locationValue"),
+        href: "https://www.google.com/maps/search/?api=1&query=Santos,+Brasil",
+      },
+      { text: "mateusfmfm@outlook.com", href: "mailto:mateusfmfm@outlook.com" },
+      { text: "+55 14 99730 2277", href: "https://wa.me/5514997302277" },
+    ],
+    [
+      { text: `${t("contacts.telegram")}: @mateusfmfm`, href: "https://t.me/mateusfmfm" },
+      {
+        text: `${t("contacts.linkedin")}: linkedin.com/in/mateusfmfm`,
+        href: "https://www.linkedin.com/in/mateusfmfm/",
+      },
+      {
+        text: `${t("contacts.github")}: github.com/mateusfmfm`,
+        href: "https://github.com/mateusfmfm",
+      },
+    ],
+  ];
 
   return {
     name: "Mateus Félix",
     title: t("intro.title"),
-    bio: t("intro.bio"),
-    contacts,
-    skillsTitle: t("skills.title"),
-    skillCategories: skillCategories.map((category) => ({
-      title: t(`skills.categories.${category.id}`),
-      items: [...category.items],
+    bio: t("cv.summaryBody"),
+    summaryTitle: t("cv.summary"),
+    contactLines,
+    skillsTitle: t("cv.skills"),
+    skillCategories: cvSkillCategoryIds.map((id) => ({
+      title: t(`cv.skillCategories.${id}`),
+      items: [...cvSkillItems[id]],
     })),
-    experiencesTitle: t("experiences.title"),
+    experiencesTitle: t("cv.experience"),
     experiences: experienceIds.map((id) => ({
       name: t(`experiences.items.${id}.name`),
       role: t(`experiences.items.${id}.role`),
       time: t(`experiences.items.${id}.time`),
       description: t(`experiences.items.${id}.description`),
     })),
-    projectsTitle: t("projects.title"),
+    projectsTitle: t("cv.projects"),
     projects: projectItems.map((project) => ({
       name: t(`projects.${project.id}.name`),
       stacks: [...project.stacks],
@@ -70,18 +104,17 @@ export function buildCvContent(t: TFunction): CvContent {
       href:
         "href" in project && typeof project.href === "string" ? project.href : undefined,
     })),
-    educationTitle: t("education.title"),
-    education: educationIds.map((id) => ({
-      degree: t(`education.items.${id}.degree`),
-      institution: t(`education.items.${id}.institution`),
-      time: t(`education.items.${id}.time`),
-      description: id === "fiap" ? t("education.items.fiap.description") : undefined,
-    })),
-    softSkillsTitle: t("softSkills.title"),
-    softSkills: softSkillIds.map((id) => ({
-      title: t(`softSkills.items.${id}.title`),
-      description: t(`softSkills.items.${id}.description`),
-    })),
+    educationTitle: t("cv.education"),
+    education: educationIds
+      .filter((id) => id !== "ufabc")
+      .map((id) => ({
+        degree: t(`education.items.${id}.degree`),
+        institution: t(`education.items.${id}.institution`),
+        time: t(`education.items.${id}.time`),
+        description: id === "fiap" ? t("education.items.fiap.description") : undefined,
+      })),
+    softSkillsTitle: t("cv.softSkills"),
+    softSkills: softSkillIds.map((id) => t(`cv.softSkillBullets.${id}`)),
   };
 }
 

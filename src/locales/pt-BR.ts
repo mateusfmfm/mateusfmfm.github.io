@@ -9,6 +9,35 @@ export default {
     languageEn: "Mudar para inglês",
     downloadCv: "Download CV",
   },
+  cv: {
+    summary: "Resumo profissional",
+    summaryBody:
+      "Engenheiro de software com 10 anos de experiência construindo soluções de software para mobile, web e desktop. Apaixonado por aprender e por arquitetura limpa. Atualmente curso pós-graduação em Inteligência Artificial para Desenvolvedores na FIAP. Especializado em Flutter, Angular, Go, React e sistemas em tempo real, com experiência liderando o desenvolvimento de aplicações de alto tráfego que atendem milhões de usuários.",
+    skills: "Habilidades técnicas",
+    skillCategories: {
+      languages: "Linguagens de programação",
+      frontend: "Front-end",
+      backend: "Back-end",
+      protocols: "Protocolos de comunicação",
+      databases: "Bancos de dados",
+      cloud: "Cloud",
+      devops: "DevOps e ferramentas",
+      ai: "Inteligência artificial",
+      practices: "Práticas",
+    },
+    experience: "Experiência profissional",
+    projects: "Projetos",
+    education: "Educação",
+    softSkills: "Soft skills",
+    softSkillBullets: {
+      frontendCraft:
+        "Atenção ao detalhe no frontend: Senso crítico apurado para responsividade e para a reprodução fiel de protótipos, garantindo uma experiência consistente entre dispositivos.",
+      codeQuality:
+        "Qualidade metódica de código: Aplico de forma constante os princípios de Clean Code e SOLID, mantenho testes unitários para proteger a qualidade e mantenho a documentação técnica e os Storybooks atualizados.",
+      userExperience:
+        "Participação na experiência do usuário: Contribuo ativamente nas discussões que alinham experiência do usuário e regras de negócio às decisões de desenvolvimento, para que isso se reflita com clareza na interface e no fluxo de uso.",
+    },
+  },
   intro: {
     badge: "🚀 Disponível para novos projetos",
     title: "Sou Mateus Félix",
@@ -64,7 +93,7 @@ export default {
         role: "Engenheiro de Software (Flutter Desktop/React/Python)",
         time: "Nov/2023 - Fev/2024",
         description:
-          "Em um produto baseado em IA, atuei como especialista frontend (Flutter Desktop e React) e na integração com Python e Django de um produto de tradução em tempo real de videochamadas com inteligência artificial, disponível como extensão do Chrome ou aplicativo desktop, com integração ao Teams, Google Meet e Zoom. A integração foi feita direta com código nativo através de Platform e Mathod Channels em C e Swift.",
+          "Em um produto baseado em IA, atuei como especialista frontend (Flutter Desktop e React) e na integração com Python e FastAPI de um produto de tradução em tempo real de videochamadas com inteligência artificial, disponível como extensão do Chrome ou aplicativo desktop, com integração ao Teams, Google Meet e Zoom. A integração foi feita direta com código nativo através de Platform e Mathod Channels em C e Swift.",
       },
       cerc: {
         name: "CERC (via 200DEV)",
@@ -85,7 +114,7 @@ export default {
         role: "Desenvolvedor Frontend (Flutter/Angular)",
         time: "Nov/2019 - Dez/2022",
         description:
-          "Utilizando Angular e Flutter, trabalhei no desenvolvimento do banco digital Nova Conta Linx, em um projeto White Label com a integração via BFF e GraphQL, permitindo uma solução financeira completa em pagamentos.",
+          "Utilizando Angular e Flutter, trabalhei no desenvolvimento do banco digital Nova Conta Linx, em um projeto White Label com a integração via BFF e GraphQL, permitindo uma solução financeira completa em pagamentos e o uso do mesmo sistema para diferente clientes.",
       },
       expor: {
         name: "Expor Manequins",

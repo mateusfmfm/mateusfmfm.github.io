@@ -9,6 +9,35 @@ export default {
     languageEn: "Switch to English",
     downloadCv: "Download CV",
   },
+  cv: {
+    summary: "Professional Summary",
+    summaryBody:
+      "Software Engineer with 10 years of experience building software solutions across mobile, web and desktop. Passionate about learning and clean architecture. Currently pursuing a postgraduate degree in IA Engineering for Developers at FIAP. Specialized in Flutter, Angular, Go, React and real-time systems, with experience leading development on high-traffic applications serving millions of users.",
+    skills: "Technical Skills",
+    skillCategories: {
+      languages: "Programming Languages",
+      frontend: "Front-end",
+      backend: "Back-end",
+      protocols: "Communication Protocols",
+      databases: "Databases",
+      cloud: "Cloud",
+      devops: "DevOps & Tools",
+      ai: "Artificial Intelligence",
+      practices: "Practices",
+    },
+    experience: "Work Experience",
+    projects: "Projects",
+    education: "Education",
+    softSkills: "Soft Skills",
+    softSkillBullets: {
+      frontendCraft:
+        "Attention to detail in frontend work: Strong critical eye for responsiveness and faithfully reproducing prototypes to ensure consistent user experience across devices.",
+      codeQuality:
+        "Methodical code quality: Consistently apply Clean Code and SOLID principles, maintain unit tests to protect quality, and keep technical documentation and Storybooks up to date.",
+      userExperience:
+        "Engagement with user experience: Actively contribute to discussions aligning user experience and business rules with development decisions, ensuring clear reflection in the interface and usage flow.",
+    },
+  },
   intro: {
     badge: "🚀 Available for new projects",
     title: "I'm Mateus Félix",
@@ -64,7 +93,7 @@ export default {
         role: "Software Engineer (Flutter Desktop/React/Python)",
         time: "Nov/2023 - Feb/2024",
         description:
-          "On an AI-based product, I worked as a frontend specialist (Flutter Desktop and React) and on the Python and Django integration of a real-time AI video-call translation product, available as a Chrome extension or desktop app, with integration for Teams, Google Meet, and Zoom. The integration was done directly with native code through Platform and Method Channels in C and Swift.",
+          "On an AI-based product, I worked as a frontend specialist (Flutter Desktop and React) and on the Python and FastAPI integration of a real-time AI video-call translation product, available as a Chrome extension or desktop app, with integration for Teams, Google Meet, and Zoom. The integration was done directly with native code through Platform and Method Channels in C and Swift.",
       },
       cerc: {
         name: "CERC",
@@ -85,7 +114,7 @@ export default {
         role: "Frontend Developer (Flutter/Angular)",
         time: "Nov/2019 - Dec/2022",
         description:
-          "Using Angular and Flutter, I worked on the Nova Conta Linx digital bank, a white-label project integrated via BFF and GraphQL, delivering a complete financial payments solution.",
+          "Using Angular and Flutter, I worked on the Nova Conta Linx digital bank, a white-label project integrated via BFF and GraphQL, delivering a complete financial payments solution and using the same system for different clients.",
       },
       expor: {
         name: "Expor Mannequins",
@@ -112,7 +141,7 @@ export default {
         time: "2012-2017",
       },
       anhembi: {
-        degree: "Systems Analysis and Development",
+        degree: "Systems Development",
         institution: "Anhembi Morumbi",
         time: "2017-2020",
       },

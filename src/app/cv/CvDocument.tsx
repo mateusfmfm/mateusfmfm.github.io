@@ -21,14 +21,8 @@ export type CvEducation = {
   description?: string;
 };
 
-export type CvSoftSkill = {
-  title: string;
-  description: string;
-};
-
-export type CvContact = {
-  label: string;
-  value: string;
+export type CvContactPart = {
+  text: string;
   href: string;
 };
 
@@ -41,7 +35,8 @@ export type CvContent = {
   name: string;
   title: string;
   bio: string;
-  contacts: CvContact[];
+  summaryTitle: string;
+  contactLines: CvContactPart[][];
   skillsTitle: string;
   skillCategories: CvSkillCategory[];
   experiencesTitle: string;
@@ -51,148 +46,120 @@ export type CvContent = {
   educationTitle: string;
   education: CvEducation[];
   softSkillsTitle: string;
-  softSkills: CvSoftSkill[];
+  softSkills: string[];
 };
+
+const mm = (value: number) => (value * 72) / 25.4;
+const bodyLeading = 12 / 9.5;
 
 const styles = StyleSheet.create({
   page: {
-    paddingTop: 40,
-    paddingBottom: 40,
-    paddingHorizontal: 40,
+    paddingTop: mm(15),
+    paddingBottom: mm(15),
+    paddingHorizontal: mm(18),
     fontFamily: "Helvetica",
-    fontSize: 10,
-    color: "#0f172a",
-    lineHeight: 1.45,
-  },
-  headerTop: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
-    gap: 16,
-    marginBottom: 10,
-  },
-  headerLeft: {
-    flex: 1,
-    paddingRight: 12,
+    fontSize: 9.5,
+    color: "#1a202c",
   },
   name: {
-    fontSize: 22,
     fontFamily: "Helvetica-Bold",
-    marginBottom: 10,
-  },
-  contacts: {
-    alignItems: "flex-end",
-    maxWidth: 200,
-    marginTop: 10,
-  },
-  contactItem: {
-    fontSize: 8,
-    color: "#475569",
+    fontSize: 18,
+    color: "#1a365d",
+    textAlign: "center",
     marginBottom: 3,
-    textAlign: "right",
+  },
+  contactLine: {
+    fontFamily: "Helvetica",
+    fontSize: 9,
+    color: "#4a5568",
+    textAlign: "center",
+    marginBottom: 3,
+  },
+  contactLineLast: {
+    marginBottom: 6,
   },
   contactLink: {
-    color: "#2563eb",
+    fontFamily: "Helvetica",
+    fontSize: 9,
+    color: "#4a5568",
     textDecoration: "none",
   },
-  bio: {
-    fontSize: 10,
-    color: "#475569",
-    marginBottom: 10,
-  },
-  link: {
-    fontSize: 10,
-    color: "#2563eb",
-    marginBottom: 10,
-  },
-  section: {
-    marginBottom: 16,
-  },
-  educationSection: {
-    marginBottom: 8,
-  },
-  softSkillsSection: {
-    marginBottom: 0,
-  },
-  softSkillItem: {
+  sectionTitle: {
+    fontFamily: "Helvetica-Bold",
+    fontSize: 12,
+    color: "#1a365d",
+    marginTop: 10,
     marginBottom: 4,
   },
   body: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    gap: 16,
-  },
-  bodyLeft: {
-    flex: 1,
-    paddingRight: 8,
-  },
-  bodyRight: {
-    width: 170,
-  },
-  sectionTitle: {
-    fontSize: 13,
-    fontFamily: "Helvetica-Bold",
-    marginBottom: 8,
-    paddingBottom: 4,
-    borderBottomWidth: 1,
-    borderBottomColor: "#e2e8f0",
-  },
-  skillGroup: {
-    marginBottom: 10,
-  },
-  skillCategoryTitle: {
-    fontSize: 9,
-    fontFamily: "Helvetica-Bold",
-    color: "#0f172a",
+    fontFamily: "Helvetica",
+    fontSize: 9.5,
+    color: "#1a202c",
+    lineHeight: bodyLeading,
     marginBottom: 2,
   },
-  skillCategoryItems: {
-    fontSize: 8,
-    color: "#475569",
-    lineHeight: 1.4,
-    marginBottom: 10,
-  },
-  item: {
-    marginBottom: 10,
-  },
-  itemHeader: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    alignItems: "baseline",
-    gap: 6,
+  skillLine: {
+    fontFamily: "Helvetica",
+    fontSize: 9.5,
+    color: "#1a202c",
+    lineHeight: bodyLeading,
     marginBottom: 2,
   },
-  itemName: {
+  skillLabel: {
+    fontFamily: "Helvetica-Bold",
+    fontSize: 9.5,
+    color: "#1a202c",
+  },
+  jobTitle: {
+    fontFamily: "Helvetica-Bold",
     fontSize: 11,
-    fontFamily: "Helvetica-Bold",
+    color: "#1a202c",
+    marginTop: 8,
+    marginBottom: 1,
   },
-  itemRole: {
-    fontSize: 10,
+  meta: {
     fontFamily: "Helvetica-Oblique",
-    color: "#64748b",
-  },
-  itemTime: {
-    fontSize: 8,
-    color: "#94a3b8",
+    fontSize: 9,
+    color: "#4a5568",
     marginBottom: 3,
   },
-  itemDescription: {
-    fontSize: 10,
-    color: "#475569",
-  },
-  stacks: {
-    fontSize: 8,
-    color: "#2563eb",
-    marginBottom: 3,
-  },
-  educationRow: {
-    flexDirection: "row",
-    gap: 16,
-  },
-  educationItem: {
-    width: "48%",
+  bullet: {
+    fontFamily: "Helvetica",
+    fontSize: 9.5,
+    color: "#1a202c",
+    lineHeight: bodyLeading,
+    marginLeft: 10,
+    marginBottom: 1,
   },
 });
+
+function toBullets(description: string): string[] {
+  return description
+    .split(/(?<=\.)\s+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+}
+
+function ContactLine({
+  parts,
+  isLast,
+}: {
+  parts: CvContactPart[];
+  isLast: boolean;
+}) {
+  return (
+    <Text style={isLast ? [styles.contactLine, styles.contactLineLast] : styles.contactLine}>
+      {parts.map((part, index) => (
+        <Text key={part.href}>
+          {index > 0 ? " | " : ""}
+          <Link src={part.href} style={styles.contactLink}>
+            {part.text}
+          </Link>
+        </Text>
+      ))}
+    </Text>
+  );
+}
 
 export default function CvDocument({ content }: { content: CvContent }) {
   return (
@@ -202,115 +169,75 @@ export default function CvDocument({ content }: { content: CvContent }) {
       subject="Curriculum Vitae"
     >
       <Page size="A4" style={styles.page}>
-        <View style={styles.headerTop}>
-          <View style={styles.headerLeft}>
-            <Text style={styles.name}>{content.name}</Text>
-            <Text style={styles.bio}>{content.bio}</Text>
-            <Text style={styles.link}>https://www.linkedin.com/in/mateusfmfm/</Text>
+        <Text style={styles.name}>{content.name}</Text>
+        {content.contactLines.map((line, index) => (
+          <ContactLine
+            key={line.map((part) => part.href).join("|")}
+            parts={line}
+            isLast={index === content.contactLines.length - 1}
+          />
+        ))}
+
+        <Text style={styles.sectionTitle}>{content.summaryTitle}</Text>
+        <Text style={styles.body}>{content.bio}</Text>
+
+        <Text style={styles.sectionTitle}>{content.skillsTitle}</Text>
+        {content.skillCategories.map((category) => (
+          <Text key={category.title} style={styles.skillLine}>
+            <Text style={styles.skillLabel}>{category.title}: </Text>
+            {category.items.join(", ")}
+          </Text>
+        ))}
+
+        <Text style={styles.sectionTitle}>{content.experiencesTitle}</Text>
+        {content.experiences.map((experience) => (
+          <View key={`${experience.name}-${experience.time}`}>
+            <Text style={styles.jobTitle}>{experience.role}</Text>
+            <Text style={styles.meta}>
+              {experience.name} | {experience.time}
+            </Text>
+            {toBullets(experience.description).map((bullet) => (
+              <Text key={bullet} style={styles.bullet}>
+                • {bullet}
+              </Text>
+            ))}
           </View>
-          <View style={styles.contacts}>
-            {content.contacts.map((contact) => (
-              <Link key={contact.href} src={contact.href} style={styles.contactLink}>
-                <Text style={styles.contactItem}>
-                  {contact.label
-                    ? `${contact.label}: ${contact.value}`
-                    : contact.value}
-                </Text>
+        ))}
+
+        <Text style={styles.sectionTitle}>{content.projectsTitle}</Text>
+        {content.projects.map((project) => (
+          <View key={project.name}>
+            {project.href ? (
+              <Link src={project.href} style={styles.jobTitle}>
+                <Text style={styles.jobTitle}>{project.name}</Text>
               </Link>
-            ))}
+            ) : (
+              <Text style={styles.jobTitle}>{project.name}</Text>
+            )}
+            {project.stacks.length > 0 && (
+              <Text style={styles.body}>{project.stacks.join(" · ")}</Text>
+            )}
+            <Text style={styles.body}>{project.description}</Text>
           </View>
-        </View>
+        ))}
 
-        <View style={styles.body}>
-          <View style={styles.bodyLeft}>
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>{content.experiencesTitle}</Text>
-              {content.experiences.map((experience) => (
-                <View
-                  key={`${experience.name}-${experience.time}`}
-                  style={styles.item}
-                  wrap={false}
-                >
-                  <View style={styles.itemHeader}>
-                    <Text style={styles.itemName}>{experience.name}</Text>
-                    <Text style={styles.itemRole}>{experience.role}</Text>
-                  </View>
-                  <Text style={styles.itemTime}>{experience.time}</Text>
-                  <Text style={styles.itemDescription}>{experience.description}</Text>
-                </View>
-              ))}
-            </View>
+        <Text style={styles.sectionTitle}>{content.educationTitle}</Text>
+        {content.education.map((item) => (
+          <View key={`${item.degree}-${item.time}`}>
+            <Text style={styles.jobTitle}>{item.degree}</Text>
+            <Text style={styles.meta}>
+              {item.institution} | {item.time}
+            </Text>
+            {item.description ? <Text style={styles.body}>{item.description}</Text> : null}
           </View>
+        ))}
 
-          <View style={styles.bodyRight}>
-            {content.skillCategories.map((category) => (
-              <View key={category.title} style={styles.skillGroup} wrap={false}>
-                <Text style={styles.skillCategoryTitle}>{category.title}</Text>
-                <Text style={styles.skillCategoryItems}>
-                  {category.items.join(", ")}
-                </Text>
-              </View>
-            ))}
-          </View>
-        </View>
-
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>{content.projectsTitle}</Text>
-          {content.projects.map((project) => (
-            <View key={project.name} style={styles.item} wrap={false}>
-              {project.href ? (
-                <Link src={project.href} style={styles.contactLink}>
-                  <Text style={styles.itemName}>{project.name}</Text>
-                </Link>
-              ) : (
-                <Text style={styles.itemName}>{project.name}</Text>
-              )}
-              {project.stacks.length > 0 && (
-                <Text style={styles.stacks}>{project.stacks.join(" · ")}</Text>
-              )}
-              <Text style={styles.itemDescription}>{project.description}</Text>
-            </View>
-          ))}
-        </View>
-
-        <View style={[styles.section, styles.educationSection]}>
-          <Text style={styles.sectionTitle}>{content.educationTitle}</Text>
-          {content.education
-            .filter((item) => item.description)
-            .map((item) => (
-              <View key={`${item.degree}-${item.time}`} style={styles.item} wrap={false}>
-                <Text style={styles.itemName}>{item.degree}</Text>
-                <Text style={styles.itemRole}>{item.institution}</Text>
-                <Text style={styles.itemTime}>{item.time}</Text>
-                <Text style={styles.itemDescription}>{item.description}</Text>
-              </View>
-            ))}
-          <View style={styles.educationRow}>
-            {content.education
-              .filter((item) => !item.description)
-              .map((item) => (
-                <View
-                  key={`${item.degree}-${item.time}`}
-                  style={styles.educationItem}
-                  wrap={false}
-                >
-                  <Text style={styles.itemName}>{item.degree}</Text>
-                  <Text style={styles.itemRole}>{item.institution}</Text>
-                  <Text style={styles.itemTime}>{item.time}</Text>
-                </View>
-              ))}
-          </View>
-        </View>
-
-        <View style={[styles.section, styles.softSkillsSection]}>
-          <Text style={styles.sectionTitle}>{content.softSkillsTitle}</Text>
-          {content.softSkills.map((item) => (
-            <View key={item.title} style={styles.softSkillItem} wrap={false}>
-              <Text style={styles.itemName}>{item.title}</Text>
-              <Text style={styles.itemDescription}>{item.description}</Text>
-            </View>
-          ))}
-        </View>
+        <Text style={styles.sectionTitle}>{content.softSkillsTitle}</Text>
+        {content.softSkills.map((bullet) => (
+          <Text key={bullet} style={styles.bullet}>
+            • {bullet}
+          </Text>
+        ))}
       </Page>
     </Document>
   );
