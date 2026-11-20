@@ -1,10 +1,12 @@
-import { Document, Link, Page, StyleSheet, Text, View } from "@react-pdf/renderer";
+import { Document, Font, Link, Page, StyleSheet, Text, View } from "@react-pdf/renderer";
+
+Font.registerHyphenationCallback((word) => [word]);
 
 export type CvExperience = {
   name: string;
   role: string;
   time: string;
-  description: string;
+  bullets: string[];
 };
 
 export type CvProject = {
@@ -133,13 +135,6 @@ const styles = StyleSheet.create({
   },
 });
 
-function toBullets(description: string): string[] {
-  return description
-    .split(/(?<=\.)\s+/)
-    .map((part) => part.trim())
-    .filter(Boolean);
-}
-
 function ContactLine({
   parts,
   isLast,
@@ -196,7 +191,7 @@ export default function CvDocument({ content }: { content: CvContent }) {
             <Text style={styles.meta}>
               {experience.name} | {experience.time}
             </Text>
-            {toBullets(experience.description).map((bullet) => (
+            {experience.bullets.map((bullet) => (
               <Text key={bullet} style={styles.bullet}>
                 • {bullet}
               </Text>

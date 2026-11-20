@@ -1,4 +1,5 @@
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 import Header from "./Header";
 
 interface ScaffoldProps {
@@ -6,6 +7,21 @@ interface ScaffoldProps {
 }
 
 export default function Scaffold({ children }: ScaffoldProps) {
+  const { t, i18n } = useTranslation();
+  const [isDownloadingAts, setIsDownloadingAts] = useState(false);
+
+  async function handleDownloadAts() {
+    if (isDownloadingAts) return;
+
+    setIsDownloadingAts(true);
+    try {
+      const { downloadCv } = await import("../../cv/downloadCv");
+      await downloadCv(t, i18n.language);
+    } finally {
+      setIsDownloadingAts(false);
+    }
+  }
+
   return (
     <div className="page-shell">
       <Header />
@@ -15,7 +31,16 @@ export default function Scaffold({ children }: ScaffoldProps) {
       </main>
 
       <footer className="site-footer">
-        © {new Date().getFullYear()} Mateus Félix. Feito com React + Tailwind.
+        <button
+          type="button"
+          className="ats-download-link"
+          disabled={isDownloadingAts}
+          aria-busy={isDownloadingAts}
+          onClick={() => void handleDownloadAts()}
+        >
+          {t("header.downloadAts")}
+        </button>
+        <p>© {new Date().getFullYear()} Mateus Félix. Feito com React + Tailwind.</p>
       </footer>
     </div>
   );

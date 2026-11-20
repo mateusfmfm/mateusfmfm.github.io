@@ -90,12 +90,24 @@ export function buildCvContent(t: TFunction): CvContent {
       items: [...cvSkillItems[id]],
     })),
     experiencesTitle: t("cv.experience"),
-    experiences: experienceIds.map((id) => ({
-      name: t(`experiences.items.${id}.name`),
-      role: t(`experiences.items.${id}.role`),
-      time: t(`experiences.items.${id}.time`),
-      description: t(`experiences.items.${id}.description`),
-    })),
+    experiences: experienceIds.map((id) => {
+      const customBullets = t(`cv.experienceBullets.${id}`, {
+        returnObjects: true,
+        defaultValue: "",
+      });
+
+      return {
+        name: t(`experiences.items.${id}.name`),
+        role: t(`experiences.items.${id}.role`),
+        time: t(`experiences.items.${id}.time`),
+        bullets: Array.isArray(customBullets)
+          ? customBullets.map(String)
+          : t(`experiences.items.${id}.description`)
+              .split(/(?<=\.)\s+/)
+              .map((part) => part.trim())
+              .filter(Boolean),
+      };
+    }),
     projectsTitle: t("cv.projects"),
     projects: projectItems.map((project) => ({
       name: t(`projects.${project.id}.name`),
@@ -126,7 +138,7 @@ export async function downloadCv(t: TFunction, language: string) {
   const suffix = language.startsWith("pt") ? "pt-BR" : "en";
 
   link.href = url;
-  link.download = `Mateus-Felix-CV-${suffix}.pdf`;
+  link.download = `Mateus-Felix-CV-A-${suffix}.pdf`;
   link.click();
 
   URL.revokeObjectURL(url);

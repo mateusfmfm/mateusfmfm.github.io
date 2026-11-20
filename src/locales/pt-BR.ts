@@ -8,6 +8,7 @@ export default {
     languagePt: "Mudar para português",
     languageEn: "Mudar para inglês",
     downloadCv: "Download CV",
+    downloadAts: "Download for ATS",
   },
   cv: {
     summary: "Resumo profissional",
@@ -26,6 +27,23 @@ export default {
       practices: "Práticas",
     },
     experience: "Experiência profissional",
+    experienceBullets: {
+      bancoBv: [
+        "Liderei o desenvolvimento mobile (Flutter) e web (Angular) de crédito e empréstimos em um app com 10 milhões de usuários.",
+        "Melhorei o código legado e entreguei novas features com arquitetura limpa em mais de 200 microapps interligados.",
+        "Usei BLoC, Riverpod, testes unitários e de widgets, e integrações REST, WebSockets, DeepLink e Push Notifications.",
+      ],
+      cerc: [
+        "Construí a plataforma web de crédito de carbono em Angular 14 e o MVP mobile em Flutter.",
+        "Integrei os produtos a uma REST API em Go, em arquitetura de microserviços.",
+        "Usei RabbitMQ, gRPC, GORM e Postgresql.",
+      ],
+      headson: [
+        "Construí o app de uma fintech para carteira digital, pagamentos e investimentos, com Go, Flutter e React.",
+        "Entreguei o produto com NextJS, Zustand, BLoC, TailwindCSS, GIN, GORM e OpenTelemetry.",
+        "Fiz o deploy na Azure.",
+      ],
+    },
     projects: "Projetos",
     education: "Educação",
     softSkills: "Soft skills",
@@ -141,7 +159,7 @@ export default {
         time: "2012-2017",
       },
       anhembi: {
-        degree: "Análise e Desenvolvimento de Sistemas",
+        degree: "Graduado em Análise e Desenvolvimento de Sistemas",
         institution: "Anhembi Morumbi",
         time: "2017-2020",
       },

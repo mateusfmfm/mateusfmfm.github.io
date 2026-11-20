@@ -12,8 +12,8 @@ export default function Header() {
 
     setIsDownloading(true);
     try {
-      const { downloadCv } = await import("../../cv/downloadCv");
-      await downloadCv(t, i18n.language);
+      const { downloadClassicCv } = await import("../../cv/downloadClassicCv");
+      await downloadClassicCv(t, i18n.language);
     } finally {
       setIsDownloading(false);
     }
