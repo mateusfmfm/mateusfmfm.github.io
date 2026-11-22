@@ -32,10 +32,15 @@ export default {
         "Liderei o desenvolvimento mobile (Flutter) e web (Angular) de crédito e empréstimos em um app com 10 milhões de usuários.",
         "Melhorei o código legado e entreguei novas features com arquitetura limpa em mais de 200 microapps interligados.",
         "Usei BLoC, Riverpod, testes unitários e de widgets, e integrações REST, WebSockets, DeepLink e Push Notifications.",
+        "Tomei decisões de arquitetura Angular nos microfrontends, separando as features em componentes independentes e reutilizáveis.",
+        "Cobri as aplicações Angular com testes unitários em Jasmine para proteger o comportamento dos componentes entre os microfrontends.",
+        "Apoiei a integração com IA: agentes com LLM e RAG no pipeline de DevOps e nos produtos, via Cursor, GitHub Actions e Gemini.",
       ],
       cerc: [
         "Construí a plataforma web de crédito de carbono em Angular 14 e o MVP mobile em Flutter.",
         "Integrei os produtos a uma REST API em Go, em arquitetura de microserviços.",
+        "Defini a arquitetura de microfrontends e a componentização no Angular para manter as features isoladas e reutilizáveis.",
+        "Escrevi testes unitários com Jasmine nos componentes Angular para garantir o comportamento da plataforma ao longo da evolução.",
         "Usei RabbitMQ, gRPC, GORM e Postgresql.",
       ],
       headson: [
@@ -97,7 +102,7 @@ export default {
         role: "Desenvolvedor Sênior (Flutter/Angular)",
         time: "Ago/2024 - Atualmente",
         description:
-          "Em um aplicativo com 10 milhões de usuários, liderei o desenvolvimento mobile (Flutter) e web (Angular) de produtos voltados a concessão de crédito e empréstimos, ajudando a melhoria continua do código legado e o desenvolvimento de novas features com o uso de arquitetura limpa em mais de 200 microapps interligados, utilizando BLoC e Riverpod em gerencia de estado, testes unitários e de widgets, integração REST, WebSockets, DeepLink e Push Notifications.",
+          "Em um aplicativo com 10 milhões de usuários, liderei o desenvolvimento mobile (Flutter) e web (Angular) de produtos voltados a concessão de crédito e empréstimos, ajudando a melhoria continua do código legado e o desenvolvimento de novas features com o uso de arquitetura limpa em mais de 200 microapps interligados, utilizando BLoC e Riverpod em gerencia de estado, testes unitários e de widgets, integração REST, WebSockets, DeepLink e Push Notifications. No Angular, tomei decisões de arquitetura nos microfrontends, separando as features em componentes independentes e reutilizáveis, e cobri as aplicações com testes unitários em Jasmine para proteger o comportamento dos componentes entre os microfrontends. Apoiei a integração com IA, com agentes de LLM e RAG no pipeline de DevOps e nos produtos, via Cursor, GitHub Actions e Gemini.",
       },
       wowe: {
         name: "Wowe",
@@ -111,14 +116,14 @@ export default {
         role: "Engenheiro de Software (Flutter Desktop/React/Python)",
         time: "Nov/2023 - Fev/2024",
         description:
-          "Em um produto baseado em IA, atuei como especialista frontend (Flutter Desktop e React) e na integração com Python e FastAPI de um produto de tradução em tempo real de videochamadas com inteligência artificial, disponível como extensão do Chrome ou aplicativo desktop, com integração ao Teams, Google Meet e Zoom. A integração foi feita direta com código nativo através de Platform e Mathod Channels em C e Swift.",
+          "Em um produto baseado em IA, atuei como especialista frontend (Flutter Desktop e React) e na integração com Python e FastAPI de um produto de tradução em tempo real de videochamadas com inteligência artificial, disponível como extensão do Chrome ou aplicativo desktop, com integração ao Teams, Google Meet e Zoom. A integração foi feita direta com código nativo através de Platform e Mathod Channels em C e Swift. A captação do áudio do usuário foi construída e enviada, via proxy, para o Whisper transcrever e para um modelo GPT traduzir em tempo real.",
       },
       cerc: {
         name: "CERC (via 200DEV)",
         role: "Engenheiro Frontend (Angular/Flutter/Go)",
         time: "Dez/2022 - Nov/2023",
         description:
-          "Atuei integralmente na construção de uma plataforma web de crédito de carbono construída com Angular 14 e o MVP mobile com Flutter, integrado com REST API feito em Go, com ferramentas como RabbitMQ, gRPC, GORM, Postgresql em uma arquitetura de Microserviços.",
+          "Atuei integralmente na construção de uma plataforma web de crédito de carbono construída com Angular 14 e o MVP mobile com Flutter, integrado com REST API feito em Go, com ferramentas como RabbitMQ, gRPC, GORM, Postgresql em uma arquitetura de Microserviços. Defini a arquitetura de microfrontends e a componentização no Angular para manter as features isoladas e reutilizáveis, e escrevi testes unitários com Jasmine nos componentes Angular para garantir o comportamento da plataforma ao longo da evolução.",
       },
       headson: {
         name: "HeadsOn",

@@ -32,10 +32,15 @@ export default {
         "Led Flutter and Angular development for credit and loan products in an app with 10 million users.",
         "Improved the legacy codebase and shipped new features with clean architecture across 200+ interconnected microapps.",
         "Delivered with BLoC, Riverpod, unit and widget tests, and REST, WebSocket, Deep Link, and push notification integrations.",
+        "Drove Angular architecture decisions for the microfrontends, splitting features into independent, reusable components.",
+        "Covered the Angular apps with Jasmine unit tests to protect component behavior across the microfrontends.",
+        "Supported AI integration: LLM and RAG agents for the DevOps pipeline and the products, using Cursor, GitHub Actions, and Gemini.",
       ],
       cerc: [
         "Built the carbon-credit web platform in Angular 14 and the mobile MVP in Flutter.",
         "Integrated both products with a Go REST API in a microservices architecture.",
+        "Defined the Angular microfrontend architecture and componentization so features stayed isolated and reusable.",
+        "Wrote Jasmine unit tests for the Angular components to lock in behavior as the platform evolved.",
         "Used RabbitMQ, gRPC, GORM, and PostgreSQL.",
       ],
       headson: [
@@ -97,7 +102,7 @@ export default {
         role: "Senior Developer (Flutter/Angular)",
         time: "Aug/2024 - Present",
         description:
-          "In an app with 10 million users, I led mobile (Flutter) and web (Angular) development for credit and loan products, helping improve the legacy codebase and shipping new features with clean architecture across more than 200 interconnected microapps, using BLoC and Riverpod for state management, unit and widget tests, and REST, WebSockets, Deep Link, and Push Notification integrations.",
+          "In an app with 10 million users, I led mobile (Flutter) and web (Angular) development for credit and loan products, helping improve the legacy codebase and shipping new features with clean architecture across more than 200 interconnected microapps, using BLoC and Riverpod for state management, unit and widget tests, and REST, WebSockets, Deep Link, and Push Notification integrations. On the Angular side, I drove architecture decisions for the microfrontends, splitting features into independent, reusable components. I also covered the Angular apps with Jasmine unit tests to protect component behavior across the microfrontends. I supported the AI integration with LLM and RAG agents for the DevOps pipeline and the products, using Cursor, GitHub Actions, and Gemini.",
       },
       wowe: {
         name: "Wowe",
@@ -111,14 +116,14 @@ export default {
         role: "Software Engineer (Flutter Desktop/React/Python)",
         time: "Nov/2023 - Feb/2024",
         description:
-          "On an AI-based product, I worked as a frontend specialist (Flutter Desktop and React) and on the Python and FastAPI integration of a real-time AI video-call translation product, available as a Chrome extension or desktop app, with integration for Teams, Google Meet, and Zoom. The integration was done directly with native code through Platform and Method Channels in C and Swift.",
+          "On an AI-based product, I worked as a frontend specialist (Flutter Desktop and React) and on the Python and FastAPI integration of a real-time AI video-call translation product, available as a Chrome extension or desktop app, with integration for Teams, Google Meet, and Zoom. The integration was done directly with native code through Platform and Method Channels in C and Swift. User audio capture was built and sent through a proxy to Whisper for transcription and to a GPT model for real-time translation.",
       },
       cerc: {
         name: "CERC",
         role: "Frontend Engineer (Angular/Flutter/Go)",
         time: "Dec/2022 - Nov/2023",
         description:
-          "Worked end-to-end on building a carbon credit web platform with Angular 14 and the mobile MVP with Flutter, integrated with a REST API built in Go, using tools such as RabbitMQ, gRPC, GORM, and PostgreSQL in a microservices architecture.",
+          "Worked end-to-end on building a carbon credit web platform with Angular 14 and the mobile MVP with Flutter, integrated with a REST API built in Go, using tools such as RabbitMQ, gRPC, GORM, and PostgreSQL in a microservices architecture. I defined the Angular microfrontend architecture and componentization so features stayed isolated and reusable, and wrote Jasmine unit tests for the Angular components to lock in behavior as the platform evolved.",
       },
       headson: {
         name: "HeadsOn",
@@ -187,7 +192,8 @@ export default {
   },
   projects: {
     title: "GitHub Portfolio",
-    description: "Some of my personal and open source projects with higher complexity.",
+    description:
+      "Some of my personal and open source projects with higher complexity.",
     flightTracker: {
       tag: "Go, React",
       name: "flight-tracker",
