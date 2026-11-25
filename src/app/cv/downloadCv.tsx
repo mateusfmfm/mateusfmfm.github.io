@@ -68,12 +68,12 @@ export function buildCvContent(t: TFunction): CvContent {
     [
       { text: `${t("contacts.telegram")}: @mateusfmfm`, href: "https://t.me/mateusfmfm" },
       {
-        text: `${t("contacts.linkedin")}: linkedin.com/in/mateusfmfm`,
+        text: `${t("contacts.linkedin")}: https://www.linkedin.com/in/mateusfmfm/`,
         href: "https://www.linkedin.com/in/mateusfmfm/",
       },
       {
-        text: `${t("contacts.github")}: github.com/mateusfmfm`,
-        href: "https://github.com/mateusfmfm",
+        text: `${t("contacts.github")}: https://www.github.com/mateusfmfm/`,
+        href: "https://www.github.com/mateusfmfm/",
       },
     ],
   ];
