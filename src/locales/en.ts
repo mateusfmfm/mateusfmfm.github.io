@@ -9,6 +9,7 @@ export default {
     languageEn: "Switch to English",
     downloadCv: "Download CV",
     downloadAts: "Download for ATS",
+    downloadAtsWithoutContacts: "Download without contacts",
   },
   cv: {
     summary: "Professional Summary",

@@ -55,7 +55,20 @@ const cvSkillCategoryIds = [
   "practices",
 ] as const;
 
-export function buildCvContent(t: TFunction): CvContent {
+const privateContactHrefs = [
+  "mailto:mateusfmfm@outlook.com",
+  "https://wa.me/5514997302277",
+  "https://t.me/mateusfmfm",
+  "https://linkedin.com/in/mateusfmfm/",
+];
+
+function withoutPrivateContacts(lines: CvContactPart[][]): CvContactPart[][] {
+  return lines
+    .map((line) => line.filter((part) => !privateContactHrefs.includes(part.href)))
+    .filter((line) => line.length > 0);
+}
+
+export function buildCvContent(t: TFunction, options?: { omitContacts?: boolean }): CvContent {
   const contactLines: CvContactPart[][] = [
     [
       {
@@ -83,7 +96,7 @@ export function buildCvContent(t: TFunction): CvContent {
     title: t("intro.title"),
     bio: t("cv.summaryBody"),
     summaryTitle: t("cv.summary"),
-    contactLines,
+    contactLines: options?.omitContacts ? withoutPrivateContacts(contactLines) : contactLines,
     skillsTitle: t("cv.skills"),
     skillCategories: cvSkillCategoryIds.map((id) => ({
       title: t(`cv.skillCategories.${id}`),
@@ -128,15 +141,20 @@ export function buildCvContent(t: TFunction): CvContent {
   };
 }
 
-export async function downloadCv(t: TFunction, language: string) {
-  const content = buildCvContent(t);
+export async function downloadCv(
+  t: TFunction,
+  language: string,
+  options?: { omitContacts?: boolean },
+) {
+  const content = buildCvContent(t, options);
   const blob = await pdf(<CvDocument content={content} />).toBlob();
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   const suffix = language.startsWith("pt") ? "pt-BR" : "en";
+  const variant = options?.omitContacts ? "A-no-contacts" : "A";
 
   link.href = url;
-  link.download = `Mateus-Felix-CV-A-${suffix}.pdf`;
+  link.download = `Mateus-Felix-CV-${variant}-${suffix}.pdf`;
   link.click();
 
   URL.revokeObjectURL(url);
