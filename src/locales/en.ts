@@ -100,7 +100,7 @@ export default {
     items: {
       bancoBv: {
         name: "Banco BV",
-        role: "Senior Developer (Flutter/Angular)",
+        role: "Frontend Engineer (Flutter/Angular)",
         time: "Aug/2024 - Present",
         description:
           "In an app with 10 million users, I led mobile (Flutter) and web (Angular) development for credit and loan products, helping improve the legacy codebase and shipping new features with clean architecture across more than 200 interconnected microapps, using BLoC and Riverpod for state management, unit and widget tests, and REST, WebSockets, Deep Link, and Push Notification integrations. On the Angular side, I drove architecture decisions for the microfrontends, splitting features into independent, reusable components. I also covered the Angular apps with Jasmine unit tests to protect component behavior across the microfrontends. I supported the AI integration with LLM and RAG agents for the DevOps pipeline and the products, using Cursor, GitHub Actions, and Gemini.",

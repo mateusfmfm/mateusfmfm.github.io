@@ -100,7 +100,7 @@ export default {
     items: {
       bancoBv: {
         name: "Banco BV (via 200DEV)",
-        role: "Desenvolvedor Sênior (Flutter/Angular)",
+        role: "Engenheiro Frontend (Flutter/Angular)",
         time: "Ago/2024 - Atualmente",
         description:
           "Em um aplicativo com 10 milhões de usuários, liderei o desenvolvimento mobile (Flutter) e web (Angular) de produtos voltados a concessão de crédito e empréstimos, ajudando a melhoria continua do código legado e o desenvolvimento de novas features com o uso de arquitetura limpa em mais de 200 microapps interligados, utilizando BLoC e Riverpod em gerencia de estado, testes unitários e de widgets, integração REST, WebSockets, DeepLink e Push Notifications. No Angular, tomei decisões de arquitetura nos microfrontends, separando as features em componentes independentes e reutilizáveis, e cobri as aplicações com testes unitários em Jasmine para proteger o comportamento dos componentes entre os microfrontends. Apoiei a integração com IA, com agentes de LLM e RAG no pipeline de DevOps e nos produtos, via Cursor, GitHub Actions e Gemini.",
